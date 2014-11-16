@@ -1,0 +1,25 @@
+{
+  "name": "carlos-algms.github.io",
+  "version": "0.1.0",
+  "homepage": "http://carlos-algms.github.io/",
+  "authors": [
+    "Carlos A. Gomes <carlos.algms@gmail.com>"
+  ],
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1",
+    "jquery": "1.11.1"
+  }
+}

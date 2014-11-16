@@ -1,0 +1,17 @@
+{
+  "name": "carlos-algms.github.io",
+  "version": "0.1.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlos-algms/carlos-algms.github.io.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-imagemin": "~0.3.0",
+    "grunt-sass": "~0.5.0"
+  }
+}
