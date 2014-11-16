@@ -1,12 +1,10 @@
 ---
-layout: page
-comments: false
-sharing: false
-footer: true
+layout: default
 ---
+
 <div class="blog-index">
   {% assign index = true %}
-  {% for post in site.posts limit: site.recent_posts %}
+  {% for post in paginator.posts %}
   {% assign content = post.content %}
     <article>
       {% include article.html %}
@@ -22,3 +20,6 @@ footer: true
     {% endif %}
   </div>
 </div>
+<aside class="sidebar">
+  
+</aside>
