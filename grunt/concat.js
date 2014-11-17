@@ -18,6 +18,7 @@ module.exports = function () {
         src: [
             'assets/third-party/modernizr.min.js',
             'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js'
         ],
         dest: '_source/Scripts/libs.dev.js'
     };
