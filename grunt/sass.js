@@ -7,7 +7,7 @@ module.exports = function ( grunt, options ) {
                 outputStyle: 'expanded'
             },
             files: {
-                '_source/Styles/site.dev.css': 'assets/scss/site.scss'
+                'assets/scss/site.css': 'assets/scss/site.scss'
             }
         }
     };
