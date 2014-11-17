@@ -2,18 +2,74 @@
 #    Jekyll & Plugins     #
 # ----------------------- #
 
-# If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-permalink: /blog/:year/:month/:day/:title/
+debug: true
 
 source: _source
 destination: _site
+plugins: plugins
+
+url: http://carlos-algms.github.io
+title: Carlos A. Gomes
+subtitle: Portfolio of Projects
+author: Carlos A. Gomes - carlos.algms@gmail.com
+simple_search: https://www.google.com/search
+description: Portfolio of projects with PHP, MySql, AngularJs, jQuery, HTML5 e CSS3.
+
+
+# If publishing to a subdirectory as in http://site.com/project set 'root: /project'
+permalink: /blog/:year/:month/:day/:title/
 
 paginate: 10          # Posts per page on the blog index
-paginate_path: "blog/page/:num/"  # Directory base for pagination URLs eg. /blog/page/2/
-category_dir: blog/categories/
+paginate_path: "blog/page-:num/"  # Directory base for pagination URLs eg. /blog/page/2/
+category_dir: blog/categories
 
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 excerpt_separator: "<!--more-->"
 
 titlecase: true       # Converts page and post titles to titlecase
+
+date_format: "%d/%m/%Y"
+
+# RSS / Email (optional) subscription links (change if using something like Feedburner)
+subscribe_rss: /atom.xml
+subscribe_email:
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+# Github repositories
+github_user: carlos-algms
+github_repo_count: 0
+github_show_profile_link: true
+github_skip_forks: true
+
+
+# Twitter
+twitter_user: carlos_wigam
+twitter_tweet_button: true
+
+
+# Google +1
+google_plus_one: true
+google_plus_one_size: medium
+
+
+# Google Plus Profile
+# Hidden: No visible button, just add author information to search results
+googleplus_user: 115056144005752028773
+googleplus_hidden: false
+
+
+# Disqus Comments
+disqus_short_name:
+disqus_show_comment_count: false
+
+
+# Google Analytics
+google_analytics_tracking_id: UA-52188553-1
+
+
+# Facebook Like
+facebook_like: true
