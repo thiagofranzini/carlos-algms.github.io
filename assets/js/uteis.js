@@ -1,4 +1,4 @@
-﻿ 
+
 var $window = $(window);
 var $html = $("html:first");
 var $head = $("head:first");
@@ -149,5 +149,3 @@ dateToStr.MATCHES = {
 };
 
 dateToStr.REGEX = new RegExp('[' + Object.keys(dateToStr.MATCHES).join('') + ']', 'g');
-
- 
