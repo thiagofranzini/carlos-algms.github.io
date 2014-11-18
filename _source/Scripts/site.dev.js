@@ -203,14 +203,15 @@ dateToStr.REGEX = new RegExp('[' + Object.keys(dateToStr.MATCHES).join('') + ']'
 		return {
 		    showRepos : function ( options ){
 				$.ajax({
-					url : "https://api.github.com/users/" + options.user + "/repos?sort=pushed&callback=?",
-					dataType : 'jsonp'
+					url : "https://api.github.com/users/" + options.user + "/repos?sort=pushed",
+					dataType: 'json',
+                    cache: true
 				})
-				.done(function ( data ) {
+				.done(function (data) {
 
-					if( ! data || ! data.data ) return;
+					if( ! data ) return;
 
-					var repos = clearRepos(data.data, options);
+					var repos = clearRepos(data, options);
 
 					render( options.target, repos );
 				})
@@ -233,7 +234,7 @@ dateToStr.REGEX = new RegExp('[' + Object.keys(dateToStr.MATCHES).join('') + ']'
 				    github.showRepos( $(this).data('data') );
 			    });
 		    }
-	    }, 1000);
+	    }, 100);
     });
 
 } )();;
