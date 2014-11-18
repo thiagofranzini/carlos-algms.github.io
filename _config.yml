@@ -9,6 +9,8 @@ destination: _site
 plugins: plugins
 
 url: http://carlos-algms.github.io
+host : 192.168.0.13
+port: 80
 title: Carlos A. Gomes
 subtitle: Portfolio of Projects
 author: Carlos A. Gomes - carlos.algms@gmail.com
