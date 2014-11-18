@@ -1,3 +1,44 @@
-<header id="header">
-	Header
-</header>
+<nav id="navbar-main" class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			<a class="navbar-brand">
+				<span>{{site.title}}</span>
+				<span>{{site.subtitle}}</span>
+			</a>
+
+		</div>
+
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="{{ root_url }}/">Home</a></li>
+				<li><a href="{{ root_url }}/blog">Blog</a></li>
+				<li><a href="{{ root_url }}/blog/archives">Archives</a></li>
+				<li><a href="{{ site.subscribe_rss }}" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+			</ul>
+
+			{% if site.simple_search %}
+			<div class="navbar-right">
+				<form class="navbar-form form-inline" action="{{ site.simple_search }}" method="get" role="form">
+					<fieldset role="search">
+						<input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}" />
+
+						<div class="form-group">
+							<input class="form-control" type="text" name="q" placeholder="Search"/>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-success"><i class="glyphicon glyphicon-search"></i></button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+</nav>

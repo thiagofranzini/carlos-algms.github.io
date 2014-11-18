@@ -1,0 +1,51 @@
+.navbar-brand {
+	height: 70px;
+
+	span {
+		display: block;
+		color : #FFF;
+
+		&:nth-child(1) {
+			font-size: 24px;
+		}
+
+		&:nth-child(2) {
+			font-size: 14px;
+		}
+	}
+}
+
+/* put the togle button to the left */
+@media (max-width: $screen-md) {
+	.navbar-brand {
+		float: left;
+		width: 220px;
+	}
+
+	.navbar-toggle {
+		float: left;
+		margin-left: 20px;
+	}
+}
+
+
+#navbar-main {
+
+	.navbar-toggle {
+		margin-top: 15px;
+	}
+
+	/* reduce de space betwen links to ensure that all will fit on only 1 line of navbar */
+	@media (max-width: $screen-md) {
+		.nav a {
+			padding: 10px;
+		}
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	#navbar .nav,
+	#navbar .navbar-right {
+		margin-top: 10px;
+	}
+}

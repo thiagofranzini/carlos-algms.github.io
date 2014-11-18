@@ -5012,3 +5012,42 @@ pre.code-block {
   padding: 0;
   border: none;
   border-radius: 0; }
+
+.navbar-brand {
+  height: 70px; }
+  .navbar-brand span {
+    display: block;
+    color: #FFF; }
+    .navbar-brand span:nth-child(1) {
+      font-size: 24px; }
+    .navbar-brand span:nth-child(2) {
+      font-size: 14px; }
+
+/* put the togle button to the left */
+@media (max-width: 992px) {
+  .navbar-brand {
+    float: left;
+    width: 220px; }
+  .navbar-toggle {
+    float: left;
+    margin-left: 20px; } }
+
+#navbar-main {
+  /* reduce de space betwen links to ensure that all will fit on only 1 line of navbar */ }
+  #navbar-main .navbar-toggle {
+    margin-top: 15px; }
+  @media (max-width: 992px) {
+    #navbar-main .nav a {
+      padding: 10px; } }
+
+@media (min-width: 768px) {
+  #navbar .nav, #navbar .navbar-right {
+    margin-top: 10px; } }
+
+/* Move down content because we have a fixed navbar that is this tall */
+body {
+  padding-top: 70px;
+  padding-bottom: 20px; }
+
+html, #navbar-main {
+  min-width: 320px; }

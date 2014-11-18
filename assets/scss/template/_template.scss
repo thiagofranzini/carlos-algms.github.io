@@ -1,0 +1,14 @@
+@import "code-blocks";
+@import "navbar";
+
+
+/* Move down content because we have a fixed navbar that is this tall */
+body {
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+
+html, #navbar-main {
+  min-width: 320px;
+}
+

@@ -1,9 +1,9 @@
-﻿
+
 module.exports = function ( grunt, options ) {
 
     return {
         options: {
-            spawn: false,
+            spawn: false
         },
         configFiles: {
             files: ['Gruntfile.js', 'grunt/*.js'],
@@ -19,21 +19,21 @@ module.exports = function ( grunt, options ) {
             files: '<%= concat.jsLibs.src %>',
             tasks: ['concat:jsLibs', 'uglify:jsLibs'],
             options: {
-                debounceDelay: 500,
+                debounceDelay: 500
             }
         },
         jsSite: {
             files: '<%= concat.jsSite.src %>',
             tasks: ['concat:jsSite', 'uglify:jsSite'],
             options: {
-                debounceDelay: 500,
+                debounceDelay: 500
             }
         },
         sassSite: {
-            files: ['assets/scss/site.scss'],
+            files: ['assets/scss/**/*.scss'],
             tasks: ['sass:site', 'concat:cssSite', 'cssmin:site'],
             options: {
-                debounceDelay: 500,
+                debounceDelay: 500
             }
         }
     };
