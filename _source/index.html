@@ -5,8 +5,15 @@ sharing: false
 footer: true
 ---
 {% assign index = true %}
+
+<div class="jumbotron">
+	{% assign post = site.posts.first %}
+	{% assign content = post.content %}
+	{% include article.html %}
+</div>
+
 <div class="blog-index">
-  {% for post in site.posts limit: site.recent_posts %}
+  {% for post in site.posts limit: site.recent_posts offset:1 %}
     {% assign content = post.content %}
     <article>
       {% include article.html %}
