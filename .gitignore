@@ -4,3 +4,7 @@ node_modules/
 .pygments-cache/
 nbproject/
 .sass-cache/
+*.phpproj*
+*.suo
+*.user
+*.sln

@@ -1,11 +1,16 @@
 @import "code-blocks";
 @import "navbar";
+@import "sidebar";
 
 
 /* Move down content because we have a fixed navbar that is this tall */
 body {
-  padding-top: 70px;
+  padding-top: 90px;
   padding-bottom: 20px;
+
+  > .container > .row {
+	  position: relative;
+  }
 }
 
 html, #navbar-main {

@@ -41,10 +41,14 @@
 
 		{% include layout_header.html %}
 
-		<div id="site-views" class="zoom container">
+		<div class="container">
+			<div class="row">
+				<div id="site-views" class="col-sm-9">
+					{{ content }}
+				</div>
 
-			{{ content }}
-
+				{% include layout_sidebar.html %}
+			</div>
 		</div>
 
 		{% include layout_footer.html %}

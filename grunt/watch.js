@@ -17,21 +17,21 @@ module.exports = function ( grunt, options ) {
         },
         jsLibs: {
             files: '<%= concat.jsLibs.src %>',
-            tasks: ['concat:jsLibs', 'uglify:jsLibs'],
+            tasks: ['concat:jsLibs'],
             options: {
                 debounceDelay: 500
             }
         },
         jsSite: {
             files: '<%= concat.jsSite.src %>',
-            tasks: ['concat:jsSite', 'uglify:jsSite'],
+            tasks: ['concat:jsSite'],
             options: {
                 debounceDelay: 500
             }
         },
         sassSite: {
             files: ['assets/scss/**/*.scss'],
-            tasks: ['sass:site', 'concat:cssSite', 'cssmin:site'],
+            tasks: ['sass:site', 'concat:cssSite'],
             options: {
                 debounceDelay: 500
             }

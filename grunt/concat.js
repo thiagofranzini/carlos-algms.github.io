@@ -11,6 +11,7 @@ module.exports = function () {
             'assets/third-party/hightlight-js/highlight.pack.js',
 
             'assets/js/uteis.js',
+			'assets/js/github.js',
             'assets/js/site.js'
         ],
         dest: '_source/Scripts/site.dev.js'
@@ -19,6 +20,7 @@ module.exports = function () {
     r.jsLibs = {
         src: [
             'assets/third-party/modernizr.min.js',
+			'bower_components/lodash/dist/lodash.compat.min.js',
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js'
         ],

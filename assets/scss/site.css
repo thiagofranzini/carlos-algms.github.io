@@ -5044,10 +5044,19 @@ pre.code-block {
   #navbar .nav, #navbar .navbar-right {
     margin-top: 10px; } }
 
+#sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-left: 1px solid #F0f0f0; }
+
 /* Move down content because we have a fixed navbar that is this tall */
 body {
-  padding-top: 70px;
+  padding-top: 90px;
   padding-bottom: 20px; }
+  body > .container > .row {
+    position: relative; }
 
 html, #navbar-main {
   min-width: 320px; }
