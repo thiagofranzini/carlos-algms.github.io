@@ -5005,9 +5005,6 @@ button.close {
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1); }
 
-.saci {
-  display: block; }
-
 pre.code-block {
   padding: 0;
   border: none;
@@ -5050,6 +5047,28 @@ pre.code-block {
   bottom: 0;
   right: 0;
   border-left: 1px solid #F0f0f0; }
+  #sidebar > section {
+    margin-bottom: 40px; }
+
+.github-repos-container .title {
+  font-size: 30px;
+  border-bottom: 1px solid; }
+.github-repos-container ul {
+  list-style: none;
+  padding: 0; }
+.github-repos-container li {
+  padding: 10px 0;
+  border-bottom: 1px solid #DDD;
+  -webkit-box-shadow: #EEE 0 1px;
+  box-shadow: #EEE 0 1px; }
+  .github-repos-container li p {
+    margin: 0; }
+.github-repos-container a {
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 14px; }
+  .github-repos-container a:hover {
+    color: #0094ff; }
 
 /* Move down content because we have a fixed navbar that is this tall */
 body {

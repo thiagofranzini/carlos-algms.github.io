@@ -1,13 +1,16 @@
 {% if site.github_user %}
 <section class="github-repos-container" data-data='{ "user": "{{site.github_user}}",
-														"count": {{site.github_repo_count}}, "skip_forks": {{site.github_skip_forks}}, "target": "#gh_repos" }'>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
-  </ul>
-  {% if site.github_show_profile_link %}
-    <a href="https://github.com/{{site.github_user}}">@{{site.github_user}}</a> on GitHub
-  {% endif %}
+                                                     "count": {{site.github_repo_count}}, 
+                                                     "skip_forks": {{site.github_skip_forks}}, 
+                                                     "target": "#gh_repos" }'>
+    <p class="title">GitHub Repos</p>
+
+    <ul id="gh_repos">
+        <li class="loading">Status updating...</li>
+    </ul>
+    {% if site.github_show_profile_link %}
+        <a href="https://github.com/{{site.github_user}}">@{{site.github_user}}</a> on GitHub
+    {% endif %}
 
 </section>
 {% endif %}
