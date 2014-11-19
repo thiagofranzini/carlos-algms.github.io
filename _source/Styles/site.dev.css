@@ -5190,14 +5190,15 @@ pre.code-block {
   #navbar .nav, #navbar .navbar-right {
     margin-top: 10px; } }
 
-#sidebar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  border-left: 1px solid #F0f0f0; }
-  #sidebar > section {
-    margin-bottom: 40px; }
+@media (min-width: 768px) {
+  #sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-left: 1px solid #F0f0f0; } }
+#sidebar > section {
+  margin-bottom: 40px; }
 
 .github-repos-container .title {
   font-size: 30px;
@@ -5214,15 +5215,21 @@ pre.code-block {
     margin: 0; }
 .github-repos-container a {
   text-decoration: underline;
-  text-transform: uppercase;
-  font-size: 14px; }
+  text-transform: uppercase; }
+  @media (min-width: 768px) { }
   .github-repos-container a:hover {
     color: #0094ff; }
 
 /* Move down content because we have a fixed navbar that is this tall */
 body {
   padding-top: 90px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-family: 'PT Sans'; }
+  @media (max-width: 480px) {
+    body {
+      font-size: 22px;
+      font-weight: 100; } }
   body > .container > .row {
     position: relative; }
 
