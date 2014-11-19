@@ -182,16 +182,15 @@ dateToStr.REGEX = new RegExp('[' + Object.keys(dateToStr.MATCHES).join('') + ']'
 
 		function clearRepos( repos, options ) {
 		    var clean = _removeForks(repos, options);
-		    clean = _removeExceededRepos(repos, options);
+		    clean = _removeExceededRepos(clean, options);
 		    return clean;
 		}
 
 		function _removeForks( repos, options ) {
-
 			if( ! options.skip_forks ) return repos;
 
-			return _.filter(repos, function(repo) {
-			    return !repo.fork;
+			return _.filter(repos, function (repo) {
+			    return ! repo.fork;
 			});
 		}
 
@@ -234,7 +233,7 @@ dateToStr.REGEX = new RegExp('[' + Object.keys(dateToStr.MATCHES).join('') + ']'
 				    github.showRepos( $(this).data('data') );
 			    });
 		    }
-	    }, 100);
+	    }, 1000);
     });
 
 } )();;
