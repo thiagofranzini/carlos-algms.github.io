@@ -9,3 +9,5 @@ nbproject/
 *.user
 *.sln
 Scripts/
+_deploy.yml
+.deploy/
