@@ -8,6 +8,6 @@ nbproject/
 *.suo
 *.user
 *.sln
-Scripts/
+/Scripts/
 _deploy.yml
 .deploy/
