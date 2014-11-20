@@ -13,7 +13,7 @@ host : 192.168.0.13
 port: 80
 title: Carlos A. Gomes
 subtitle: Portfolio of Projects
-author: Carlos A. Gomes - carlos.algms@gmail.com
+author: Carlos A. Gomes
 simple_search: https://www.google.com/search
 description: Portfolio of projects with PHP, MySql, AngularJs, jQuery, HTML5 e CSS3.
 
