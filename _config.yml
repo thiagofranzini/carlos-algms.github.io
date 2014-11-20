@@ -2,7 +2,7 @@
 #    Jekyll & Plugins     #
 # ----------------------- #
 
-debug: true
+debug: false
 
 source: _source
 destination: _site
