@@ -11,3 +11,5 @@ nbproject/
 /Scripts/
 _deploy.yml
 .deploy/
+.idea/
+*.iml
