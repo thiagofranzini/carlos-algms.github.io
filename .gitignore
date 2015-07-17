@@ -13,3 +13,4 @@ _deploy.yml
 .deploy/
 .idea/
 *.iml
+Gemfile.lock
