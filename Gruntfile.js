@@ -90,7 +90,8 @@ function gruntConfig(grunt) {
 
       serve: [
         'watch',
-        'shell:jekyllServe'
+        'shell:jekyllServe',
+        'open:dev'
       ]
     },
 
@@ -164,6 +165,14 @@ function gruntConfig(grunt) {
           '_source/Scripts/libs.dev.js'
         ],
         dest: '_source/Scripts/libs.min.js'
+      }
+    },
+
+
+    open: {
+      dev: {
+        url: 'http://127.0.0.1:8080/',
+        app: 'google-chrome'
       }
     }
   });
