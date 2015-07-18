@@ -1,0 +1,56 @@
+
+#sidebar {
+
+    @media (min-width: $screen-sm) {
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    right: 0;
+	    border-left: 1px solid #F0f0f0;
+    }
+
+
+    > section {
+        margin-bottom: 40px;
+    }
+}
+
+.github-repos-container {
+     
+    .title {
+        font-size: 30px;
+        border-bottom: 1px solid;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        padding: 10px 0;
+        border-bottom: 1px solid #DDD;
+        @include box-shadow( #EEE 0 1px );
+
+        p {
+            margin: 0;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        text-transform: uppercase;
+
+        @media (min-width: $screen-sm) {
+            & {
+            }
+        }
+
+        &:hover {
+            color: #0094ff;
+        }
+    }
+
+
+
+}

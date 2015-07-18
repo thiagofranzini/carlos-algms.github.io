@@ -1,56 +1,67 @@
+#sidebar-default {
+  color: #FFF;
+  background-color: #2b2b2b;
 
-#sidebar {
-
-    @media (min-width: $screen-sm) {
-	    position: absolute;
-	    top: 0;
-	    bottom: 0;
-	    right: 0;
-	    border-left: 1px solid #F0f0f0;
+  @media (min-width: $screen-sm) {
+    & {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      display: block;
+      padding: 10px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      border-right: 1px solid #eee;
     }
 
-
-    > section {
-        margin-bottom: 40px;
+    .navbar-header, .navbar-brand {
+      float: none;
     }
+
+    .navbar-nav {
+      float: none;
+
+      > li {
+        float: none;
+        display: block;
+        text-align: center;
+      }
+
+      a {
+
+      }
+    }
+
+    .navbar-collapse {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .navbar-brand {
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    border-bottom: 1px solid #FFF;
+    padding: 0;
+    height: 80px;
+    margin-bottom: 20px;
+
+    span {
+      display: block;
+
+      &.title {
+        font-size: 40px;
+        line-height: 1em;
+      }
+    }
+  }
+
 }
 
-.github-repos-container {
-     
-    .title {
-        font-size: 30px;
-        border-bottom: 1px solid;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    li {
-        padding: 10px 0;
-        border-bottom: 1px solid #DDD;
-        @include box-shadow( #EEE 0 1px );
-
-        p {
-            margin: 0;
-        }
-    }
-
-    a {
-        text-decoration: underline;
-        text-transform: uppercase;
-
-        @media (min-width: $screen-sm) {
-            & {
-            }
-        }
-
-        &:hover {
-            color: #0094ff;
-        }
-    }
-
-
-
-}

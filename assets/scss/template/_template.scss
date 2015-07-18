@@ -2,26 +2,22 @@
 $screen-mb : 480px;
 
 @import "code-blocks";
-@import "navbar";
+//@import "navbar";
 @import "sidebar";
+@import "sidebar-right";
 
 /* Move down content because we have a fixed navbar that is this tall */
 body {
-    padding-top: 90px;
-    padding-bottom: 20px;
-    font-size: 18px;
-    font-family: 'PT Sans';
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-family: 'PT Sans', sans-serif;
 
-    @media (max-width: $screen-mb) {
-        & {
-            font-size: 22px;
-            font-weight: 100;
-        }
+  @media (max-width: $screen-mb) {
+    & {
+      font-size: 22px;
+      font-weight: 100;
     }
-
-    > .container > .row {
-	    position: relative;
-    }
+  }
 }
 
 html, #navbar-main {
