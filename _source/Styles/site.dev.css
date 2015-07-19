@@ -11310,7 +11310,6 @@ html.fonts-loaded {
   font-family: Raleway, sans-serif;
 }
 
-/* Move down content because we have a fixed navbar that is this tall */
 body {
   padding-bottom: 20px;
   font-family: inherit;
@@ -11325,4 +11324,60 @@ body {
 
 html, #navbar-main {
   min-width: 320px;
+}
+
+.blog-index article {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+.blog-index article:first-child {
+  margin-top: 0;
+}
+
+.blog-index article header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.blog-index article header a {
+  color: #000;
+}
+
+.blog-index article header a:hover {
+  color: #555;
+  text-decoration: none;
+}
+
+.blog-index article a[rel="full-article"] {
+  color: #000;
+  text-decoration: underline;
+}
+
+.blog-index article a[rel="full-article"]:hover {
+  color: #555;
+}
+
+.blog-index article::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 5px solid transparent;
+}
+
+.blog-index article:hover::before {
+  border-left-color: #2b2b2b;
+}
+
+.blog-index article::after {
+  position: absolute;
+  content: '';
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-bottom: 1px solid #CCC;
 }

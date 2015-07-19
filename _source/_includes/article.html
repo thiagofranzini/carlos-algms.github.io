@@ -1,3 +1,4 @@
+<article>
 {% unless page.no_header %}
   <header>
     {% if index %}
@@ -9,6 +10,12 @@
         {% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}
       </h1>
     {% endif %}
+
+    <time datetime="{{post.date}}">
+      <!-- TODO the date are not showed when showing full article -->
+      <i class="fa fa-calendar"></i>
+      {{ post.date | date: '%Y-%m-%d' }}
+    </time>
 
     {% unless page.meta == false %}
       <p class="meta">
@@ -27,10 +34,13 @@
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
   {% if excerpted == 'true' %}
     <footer>
-      <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+      <a rel="full-article" href="{{ root_url }}{{ post.url }}">
+        {{ site.excerpt_link }}
+        <i class="fa fa-angle-double-right"></i>
+      </a>
     </footer>
   {% endif %}
 {% else %}
   <div class="entry-content">{{ content }}</div>
 {% endif %}
-
+</article>

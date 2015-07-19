@@ -15,9 +15,7 @@ footer: true
 <div class="blog-index">
   {% for post in site.posts limit: site.recent_posts offset:1 %}
     {% assign content = post.content %}
-    <article>
-      {% include article.html %}
-    </article>
+    {% include article.html %}
   {% endfor %}
 
   <div class="pagination">

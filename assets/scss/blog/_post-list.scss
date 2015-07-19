@@ -1,0 +1,63 @@
+.blog-index {
+
+  article {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 10px;
+    padding-bottom: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    header {
+      h1 {
+        margin: 0;
+        font-size: 30px;
+      }
+
+      a {
+        color: #000;
+
+        &:hover {
+          color: #555;
+          text-decoration: none;
+        }
+      }
+
+    }
+
+    a[rel="full-article"] {
+      color: #000;
+      text-decoration: underline;
+
+      &:hover {
+        color: #555;
+      }
+    }
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      border-left: 5px solid transparent;
+    }
+
+    &:hover::before {
+      border-left-color: #2b2b2b;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 20px;
+      right: 20px;
+      bottom: 0;
+      border-bottom: 1px solid #CCC;
+    }
+  }
+
+}
