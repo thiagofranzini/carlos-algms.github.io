@@ -250,29 +250,51 @@ dateToStr.REGEX = new RegExp( '[' + Object.keys( dateToStr.MATCHES ).join( '' ) 
   } );
 
 } )();;
+(function (window, $) {
 
-$( function (){
-  var each = function ( i, block ){
-    hljs.highlightBlock( block );
-  };
+  $(function () {
+    loadGoogleFonts();
+    stylizeCodeblocks();
+    handleCssChanges();
+  });
 
-  $( 'pre code' ).each( each );
-} );
+  function loadGoogleFonts() {
+    yepnope.injectCss('http://fonts.googleapis.com/css?family=Raleway:300,400,700', fontLoaded);
 
-( function (){
-  var style = $( '#devCss' );
-
-  window.updateCss = function (){
-    style.attr( 'href', style.attr( 'href' ).replace( /\?*[0-9]*$/, '?' + Date.now() ) );
-    console.log( 'update-CSS' );
-  };
-
-  $DOC.keyup( function ( e ){
-    if( e.keyCode == 193 )
-      updateCss();
-  } );
-
-  if( location.search.indexOf( 'refresh' ) !== - 1 ){
-    setInterval( window.updateCss, 1000 );
+    function fontLoaded() {
+      $html.addClass('fonts-loaded');
+    }
   }
-} )();
+
+
+  function stylizeCodeblocks() {
+    $('pre code').each( eachCodeBlock );
+
+    function eachCodeBlock( i, block ){
+      hljs.highlightBlock( block );
+    }
+  }
+
+
+  function handleCssChanges() {
+    var styleElement = $( '#devCss' );
+    window.updateCss = updateCss;
+    $DOC.keyup(updateCssOnKeyUp);
+
+    if( location.search.indexOf( 'refresh' ) !== - 1 ){
+      setInterval( window.updateCss, 1000 );
+    }
+
+    function updateCssOnKeyUp( e ){
+      if( e.keyCode == Teclas.PAUSE ) {
+        updateCss();
+      }
+    }
+
+    function updateCss() {
+      styleElement.attr( 'href', styleElement.attr( 'href' ).replace( /\?*[0-9]*$/, '?' + Date.now() ) );
+      console.log( 'update-CSS' );
+    }
+  }
+
+})(this, jQuery);

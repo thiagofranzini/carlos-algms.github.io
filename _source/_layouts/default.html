@@ -26,8 +26,6 @@
 
   <link rel="stylesheet" href="{{ root_url }}/Styles/site.{% if site.debug %}dev{% else %}min{% endif %}.css" type="text/css" id="devCss" />
 
-  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic|PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" />
-
   {% unless site.debug %}{% include google_analytics.html %}{% endunless %}
 
   <!--[if lt IE 9]>
@@ -54,8 +52,7 @@
   </div>
 </div>
 
-
-
 <script src="{{ root_url }}/Scripts/site.{% if site.debug %}dev{% else %}min{% endif %}.js" type="text/javascript"></script>
+
 </body>
 </html>

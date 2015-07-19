@@ -6,11 +6,19 @@ $screen-mb : 480px;
 @import "sidebar";
 @import "sidebar-right";
 
+html {
+  font-family: sans-serif;
+  font-size: 18px;
+
+  &.fonts-loaded {
+    font-family: Raleway, sans-serif;
+  }
+}
+
 /* Move down content because we have a fixed navbar that is this tall */
 body {
   padding-bottom: 20px;
-  font-size: 18px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: inherit;
 
   @media (max-width: $screen-mb) {
     & {

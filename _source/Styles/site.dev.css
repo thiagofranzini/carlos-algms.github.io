@@ -11296,11 +11296,19 @@ pre.code-block {
   color: #0094ff;
 }
 
+html {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+html.fonts-loaded {
+  font-family: Raleway, sans-serif;
+}
+
 /* Move down content because we have a fixed navbar that is this tall */
 body {
   padding-bottom: 20px;
-  font-size: 18px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: inherit;
 }
 
 @media (max-width: 480px) {
