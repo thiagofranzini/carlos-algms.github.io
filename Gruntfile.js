@@ -146,6 +146,12 @@ function gruntConfig(grunt) {
       },
       jekyllServe: {
         command: 'jekyll serve --config _config.yml,_config_local.yml'
+      },
+      jekyllBuild: {
+        command: 'jekyll build --config _config.yml'
+      },
+      deployGithub: {
+        command: 'octopress deploy'
       }
     },
 
@@ -181,4 +187,14 @@ function gruntConfig(grunt) {
   grunt.registerTask('default', []);
 
   grunt.registerTask('serve', [ 'concurrent:serve' ]);
+
+  grunt.registerTask('deploy', [
+    'sass',
+    'concat',
+    'cssmin',
+    'uglify',
+    'shell:jekyllBuild',
+    'shell:deployGithub'
+  ]);
+
 }
