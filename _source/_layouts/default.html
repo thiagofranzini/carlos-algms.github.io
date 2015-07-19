@@ -41,9 +41,11 @@
 <div class="container-fluid">
   <div class="row">
 
-    {% include layout-sidebar-default.html %}
+    <div id="sidebar-default" class="col-xs-12 col-sm-4 col-lg-3">
+      {% include layout-sidebar-default.html %}
+    </div>
 
-    <div id="site-views" class="col-xs-12 col-sm-8 col-sm-offset-4 main">
+    <div id="site-views" class="col-xs-12 col-sm-8 col-sm-offset-4 col-lg-offset-3 main">
       {{ content }}
     </div>
 

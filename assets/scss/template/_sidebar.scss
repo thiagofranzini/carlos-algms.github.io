@@ -1,4 +1,8 @@
 #sidebar-default {
+  position: relative;
+}
+
+#sidebar-default-inner {
   color: #FFF;
   background-color: #2b2b2b;
 
@@ -6,6 +10,7 @@
     & {
       position: fixed;
       top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
       z-index: 1000;
@@ -29,8 +34,8 @@
         text-align: center;
       }
 
-      a {
-
+      a:hover {
+        color: #000;
       }
     }
 
@@ -48,7 +53,6 @@
     display: block;
     text-align: center;
     font-weight: 300;
-    border-bottom: 1px solid #FFF;
     padding: 0;
     height: 80px;
     margin-bottom: 20px;
@@ -62,6 +66,8 @@
       }
     }
   }
-
 }
 
+#default-navbar {
+  border-top: 1px solid #FFF;
+}

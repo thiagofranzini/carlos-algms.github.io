@@ -8604,14 +8604,19 @@ pre.code-block {
 }
 
 #sidebar-default {
+  position: relative;
+}
+
+#sidebar-default-inner {
   color: #FFF;
   background-color: #2b2b2b;
 }
 
 @media (min-width: 768px) {
-  #sidebar-default {
+  #sidebar-default-inner {
     position: fixed;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -8621,44 +8626,50 @@ pre.code-block {
     overflow-y: auto;
     border-right: 1px solid #eee;
   }
-  #sidebar-default .navbar-header, #sidebar-default .navbar-brand {
+  #sidebar-default-inner .navbar-header, #sidebar-default-inner .navbar-brand {
     float: none;
   }
-  #sidebar-default .navbar-nav {
+  #sidebar-default-inner .navbar-nav {
     float: none;
   }
-  #sidebar-default .navbar-nav > li {
+  #sidebar-default-inner .navbar-nav > li {
     float: none;
     display: block;
     text-align: center;
   }
-  #sidebar-default .navbar-collapse {
+  #sidebar-default-inner .navbar-nav a:hover {
+    color: #000;
+  }
+  #sidebar-default-inner .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
   }
 }
 
-#sidebar-default a {
+#sidebar-default-inner a {
   color: inherit;
 }
 
-#sidebar-default .navbar-brand {
+#sidebar-default-inner .navbar-brand {
   display: block;
   text-align: center;
   font-weight: 300;
-  border-bottom: 1px solid #FFF;
   padding: 0;
   height: 80px;
   margin-bottom: 20px;
 }
 
-#sidebar-default .navbar-brand span {
+#sidebar-default-inner .navbar-brand span {
   display: block;
 }
 
-#sidebar-default .navbar-brand span.title {
+#sidebar-default-inner .navbar-brand span.title {
   font-size: 40px;
   line-height: 1em;
+}
+
+#default-navbar {
+  border-top: 1px solid #FFF;
 }
 
 @media (min-width: 768px) {
