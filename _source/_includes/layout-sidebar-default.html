@@ -2,6 +2,8 @@
   <header class="navbar-header">
 
     <a class="navbar-brand" href="{{ root_url }}/">
+      <i class="fa fa-code"></i>
+
       <span class="title">{{site.title}}</span>
       <span class="subtitle">{{site.subtitle}}</span>
     </a>
@@ -14,10 +16,24 @@
 
   <div class="collapse navbar-collapse" id="default-navbar">
     <ul class="nav navbar-nav">
-      <li><a href="{{ root_url }}/">Home</a></li>
-      <li><a href="{{ root_url }}/blog">Blog</a></li>
-      <li><a href="{{ root_url }}/blog/archives">Archives</a></li>
-      <li><a href="{{ site.subscribe_rss }}" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      <li>
+        <a href="{{ root_url }}/">
+          <i class="fa fa-home"></i>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="{{ root_url }}/blog">
+          <i class="fa fa-files-o"></i>
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="{{ site.subscribe_rss }}" rel="subscribe-rss" title="subscribe via RSS">
+          <i class="fa fa-rss-square"></i>
+          RSS
+        </a>
+      </li>
     </ul>
   </div>
 

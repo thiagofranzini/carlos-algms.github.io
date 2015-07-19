@@ -10957,12 +10957,29 @@ pre.code-block {
 
 #sidebar-default {
   position: relative;
+  margin-bottom: 15px;
 }
 
 #sidebar-default-inner {
   color: #FFF;
   background-color: #2b2b2b;
+  padding-top: 20px;
   padding-bottom: 50px;
+}
+
+#sidebar-default-inner .navbar-nav > li > a {
+  transition: all 600ms;
+}
+
+#sidebar-default-inner .navbar-nav > li > a:hover {
+  color: #000;
+}
+
+#sidebar-default-inner .navbar-toggle {
+  position: absolute;
+  top: 130px;
+  right: 0px;
+  font-size: 22px;
 }
 
 @media (min-width: 768px) {
@@ -10974,7 +10991,7 @@ pre.code-block {
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
     overflow-x: hidden;
     overflow-y: auto;
     border-right: 1px solid #eee;
@@ -10984,14 +11001,19 @@ pre.code-block {
   }
   #sidebar-default-inner .navbar-nav {
     float: none;
+    padding-top: 10px;
   }
   #sidebar-default-inner .navbar-nav > li {
     float: none;
     display: block;
-    text-align: center;
   }
-  #sidebar-default-inner .navbar-nav a:hover {
-    color: #000;
+  #sidebar-default-inner .navbar-nav > li > a {
+    padding: 8px 0;
+    font-size: 24px;
+    text-indent: 35%;
+  }
+  #sidebar-default-inner .navbar-nav > li > a i {
+    text-indent: 0;
   }
   #sidebar-default-inner .navbar-collapse {
     padding-left: 0;
@@ -11006,10 +11028,18 @@ pre.code-block {
 #sidebar-default-inner .navbar-brand {
   display: block;
   text-align: center;
-  font-weight: 300;
   padding: 0;
-  height: 80px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  height: auto;
+}
+
+#sidebar-default-inner .navbar-brand i {
+  font-size: 65px;
+  width: 100px;
+  line-height: 100px;
+  border-radius: 100%;
+  background: #FFF;
+  color: #000;
 }
 
 #sidebar-default-inner .navbar-brand span {
