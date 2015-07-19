@@ -5,6 +5,7 @@
 #sidebar-default-inner {
   color: #FFF;
   background-color: #2b2b2b;
+  padding-bottom: 50px;
 
   @media (min-width: $screen-sm) {
     & {
@@ -45,7 +46,7 @@
     }
   }
 
-  a {
+  .navbar-nav a, .navbar-brand {
     color: inherit;
   }
 
@@ -70,4 +71,53 @@
 
 #default-navbar {
   border-top: 1px solid #FFF;
+}
+
+.social-icons {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 0;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #444;
+  background-color: inherit;
+
+  &::before {
+    content: ' ';
+    display: block;
+    border-top: 1px solid #000;
+  }
+
+  a {
+    color: #FFF;
+    font-size: 32px;
+    line-height: 1em;
+    display: inline-block;
+    width: 25%;
+    padding: 5px 0;
+    transition: all 300ms ease-in-out;
+    text-decoration: none;
+  }
+
+
+  .github:hover {
+    color: #000;
+  }
+
+  .facebook:hover {
+    color: #3b5998;
+  }
+
+  .gplus:hover {
+    color: #d34836;
+  }
+
+  .linkedin:hover {
+    color: #007bb6;
+  }
+
+  .github:hover, .facebook:hover, .gplus:hover, .linkedin:hover {
+    background: #FFF;
+  }
 }
