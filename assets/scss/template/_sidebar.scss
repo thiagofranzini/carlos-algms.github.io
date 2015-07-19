@@ -11,6 +11,7 @@
 
   .navbar-nav > li > a {
     transition: all 600ms;
+    font-size: 24px;
 
     &:hover {
       color: #000;
@@ -19,8 +20,8 @@
 
   .navbar-toggle {
     position: absolute;
-    top: 130px;
-    right: 0px;
+    top: 140px;
+    right: 0;
     font-size: 22px;
   }
 
@@ -53,7 +54,6 @@
 
         > a {
           padding: 8px 0;
-          font-size: 24px;
           text-indent: 35%;
 
           i {
@@ -97,8 +97,13 @@
       display: block;
 
       &.title {
-        font-size: 40px;
+        font-size: 30px;
         line-height: 1em;
+        margin: 5px 0;
+      }
+
+      &.subtitle {
+        font-weight: 300;
       }
     }
   }

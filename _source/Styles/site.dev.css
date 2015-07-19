@@ -11118,6 +11118,7 @@ pre.code-block {
 
 #sidebar-default-inner .navbar-nav > li > a {
   transition: all 600ms;
+  font-size: 24px;
 }
 
 #sidebar-default-inner .navbar-nav > li > a:hover {
@@ -11126,8 +11127,8 @@ pre.code-block {
 
 #sidebar-default-inner .navbar-toggle {
   position: absolute;
-  top: 130px;
-  right: 0px;
+  top: 140px;
+  right: 0;
   font-size: 22px;
 }
 
@@ -11158,7 +11159,6 @@ pre.code-block {
   }
   #sidebar-default-inner .navbar-nav > li > a {
     padding: 8px 0;
-    font-size: 24px;
     text-indent: 35%;
   }
   #sidebar-default-inner .navbar-nav > li > a i {
@@ -11196,8 +11196,13 @@ pre.code-block {
 }
 
 #sidebar-default-inner .navbar-brand span.title {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1em;
+  margin: 5px 0;
+}
+
+#sidebar-default-inner .navbar-brand span.subtitle {
+  font-weight: 300;
 }
 
 #default-navbar {
