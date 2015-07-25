@@ -15,7 +15,7 @@
 .file-saver-demo-canvas,
 .file-saver-demo-text,
 .file-saver-demo-xhtml {
-  width: 500px;
+  width: 100%;
   height: 300px;
   margin-bottom: 10px;
   border: 1px solid #000;
