@@ -4,8 +4,6 @@ require(['jquery'], function ($) {
   $(function () {
     var view = window;
 
-    // The canvas drawing portion of the demo is based off the demo at
-    // http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/
     var document = view.document;
     var session = view.sessionStorage;
 
@@ -18,10 +16,10 @@ require(['jquery'], function ($) {
       return view.Blob;
     };
 
-    var canvas = byId('canvas');
+
     var canvas_options_form = byId('canvas-options');
     var canvas_filename = byId('canvas-filename');
-    var canvas_clear_button = byId('canvas-clear');
+
     var text = byId('text');
     var text_options_form = byId('text-options');
     var text_filename = byId('text-filename');
@@ -29,42 +27,10 @@ require(['jquery'], function ($) {
     var html_options_form = byId('html-options');
     var html_filename = byId('html-filename');
 
-    var ctx = canvas.getContext('2d');
-    var drawing = false;
-    var x_points = session.x_points || [];
-    var y_points = session.y_points || [];
-    var drag_points = session.drag_points || [];
 
-    var add_point = function (x, y, dragging) {
-      x_points.push(x);
-      y_points.push(y);
-      drag_points.push(dragging);
-    };
-
-    var draw = function () {
-      //canvas.width = canvas.width;
-      ctx.lineWidth = 6;
-      ctx.lineJoin = 'round';
-      ctx.strokeStyle = '#000000';
-      var i = 0;
-      var len = x_points.length;
-
-      for (; i < len; i++) {
-        ctx.beginPath();
-        if (i && drag_points[i]) {
-          ctx.moveTo(x_points[i - 1], y_points[i - 1]);
-        } else {
-          ctx.moveTo(x_points[i] - 1, y_points[i]);
-        }
-        ctx.lineTo(x_points[i], y_points[i]);
-        ctx.closePath();
-        ctx.stroke();
-      }
-    };
-
-    var stop_drawing = function () {
-      drawing = false;
-    };
+    if (sessionStorage.canvasFilename) {
+      canvas_filename.value = sessionStorage.canvasFilename;
+    }
 
     // Title guesser and document creator available at https://gist.github.com/1059648
     var guess_title = function (doc) {
@@ -84,6 +50,7 @@ require(['jquery'], function ($) {
         }
       }
     };
+
     var doc_impl = document.implementation;
 
     var create_html_doc = function (html) {
@@ -109,24 +76,6 @@ require(['jquery'], function ($) {
       return doc;
     };
 
-    canvas.width = 500;
-    canvas.height = 300;
-
-    if (typeof x_points === 'string') {
-      x_points = JSON.parse(x_points);
-    }
-
-    if (typeof y_points === 'string') {
-      y_points = JSON.parse(y_points);
-    }
-
-    if (typeof drag_points === 'string') {
-      drag_points = JSON.parse(drag_points);
-    }
-
-    if (session.canvas_filename) {
-      canvas_filename.value = session.canvas_filename;
-    }
 
     if (session.text) {
       text.value = session.text;
@@ -144,34 +93,7 @@ require(['jquery'], function ($) {
       html_filename.value = session.html_filename;
     }
 
-    drawing = true;
-    draw();
-    drawing = false;
 
-    canvas_clear_button.addEventListener('click', function () {
-      canvas.width = canvas.width;
-      x_points.length = 0;
-      y_points.length = 0;
-      drag_points.length = 0;
-    }, false);
-
-    canvas.addEventListener('mousedown', function (event) {
-      event.preventDefault();
-      drawing = true;
-      console.log(event);
-      add_point(event.offsetX, event.offsetY, false);
-      draw();
-    }, false);
-
-    canvas.addEventListener('mousemove', function (event) {
-      if (drawing) {
-        add_point(event.offsetX, event.offsetY, true);
-        draw();
-      }
-    }, false);
-
-    canvas.addEventListener('mouseup', stop_drawing, false);
-    canvas.addEventListener('mouseout', stop_drawing, false);
 
     canvas_options_form.addEventListener('submit', function (event) {
       event.preventDefault();
@@ -212,9 +134,6 @@ require(['jquery'], function ($) {
     }, false);
 
     view.addEventListener('unloads', function () {
-      session.x_points = JSON.stringify(x_points);
-      session.y_points = JSON.stringify(y_points);
-      session.drag_points = JSON.stringify(drag_points);
       session.canvas_filename = canvas_filename.value;
 
       session.text = text.value;
