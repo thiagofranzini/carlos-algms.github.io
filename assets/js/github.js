@@ -1,89 +1,105 @@
-( function (){
-  var Github = function (){
+require(['jquery'], function ($) {
 
-    function escapeHtml( str ){
-      return $( '<div />' ).text( str ).html();
+  $(function (){
+    var githubReposContainers = $( '.github-repos-container' );
+    if( ! githubReposContainers.length ) {
+      return;
     }
 
+    setTimeout(function () {
+      var github = Github();
 
-    function _makeRepoLine( repo ){
-      var li = $( '<li />' ), a = $( '<a />' ), p = $( '<p />' );
+      githubReposContainers.each( function (){
+        github.showRepos( $( this ).data( 'data' ) );
+      });
+    }, 1000);
+  });
 
-      li.append( a );
-      li.append( p );
+  //////////////////
 
-      a.attr( 'href', repo.html_url ).html( repo.name );
-      p.html( escapeHtml( repo.description || '' ) );
+  function Github() {
+    return {
+      showRepos : _showRepos
+    };
 
-      return li;
+    function _showRepos( options ) {
+      $.ajax({
+        url : "https://api.github.com/users/" + options.user + "/repos?sort=pushed",
+        dataType : 'json',
+        cache : true
+      })
+      .done(_showReposDone)
+      .fail(_showReposFail);
     }
 
-    function render( targetId, repos ){
-      var target = $( targetId );
-      target.empty();
-
-      _.forEach( repos, function ( repo ){
-        target.append( _makeRepoLine( repo ) );
-      } );
+    function _showReposDone( data ){
+      if( ! data ) {
+        return;
+      }
+      var repos = _clearRepos( data, options );
+      _render( options.target, repos );
     }
 
-    function clearRepos( repos, options ){
+    function _showReposFail( err ){
+      $( options.target + ' li.loading' ).addClass( 'error' ).text( "Error loading feed" );
+    }
+
+    function _clearRepos( repos, options ){
       var clean = _removeForks( repos, options );
       clean = _removeExceededRepos( clean, options );
       return clean;
     }
 
     function _removeForks( repos, options ){
-      if( ! options.skip_forks )
+      if( ! options.skip_forks ) {
         return repos;
+      }
 
-      return _.filter( repos, function ( repo ){
+      return repos.filter(function ( repo ){
         return ! repo.fork;
-      } );
+      });
     }
 
     function _removeExceededRepos( repos, options ){
-      if( ! options.count )
+      if( ! options.count ) {
         return repos;
+      }
       return repos.splice( options.count );
     }
 
-    return {
-      showRepos : function ( options ){
-        $.ajax( {
-          url : "https://api.github.com/users/" + options.user + "/repos?sort=pushed",
-          dataType : 'json',
-          cache : true
-        } )
-            .done( function ( data ){
+    function _render( targetId, repos ) {
+      var target = $( targetId );
+      target.empty();
 
-              if( ! data )
-                return;
+      repos.forEach(function ( repo ){
+        target.append( _makeRepoLine( repo ) );
+      });
+    }
 
-              var repos = clearRepos( data, options );
+    function _makeRepoLine( repo ){
+      var li = $( '<li />' );
+      _appendLink(li, repo);
+      _appendDescription(li, repo);
 
-              render( options.target, repos );
-            } )
-            .fail( function ( err ){
-              $( options.target + ' li.loading' ).addClass( 'error' ).text( "Error loading feed" );
-            } );
-      }
-    };
-  };
+      return li;
+    }
 
-  $( function (){
+    function _appendLink(li, repo) {
+      $( '<a />' )
+        .attr( 'href', repo.html_url )
+        .html( repo.name )
+        .appendTo( li );
+    }
 
-    setTimeout( function (){
-      var githubReposContainers = $( '.github-repos-container' );
+    function _appendDescription(li, repo) {
+      $( '<p />' )
+        .appendTo(li)
+        .html( escapeHtml( repo.description || '' ) );
+    }
 
-      if( githubReposContainers.length ){
-        var github = Github();
+    function escapeHtml( str ){
+      return $( '<div />' ).text( str ).html();
+    }
+  }
 
-        $( '.github-repos-container' ).each( function (){
-          github.showRepos( $( this ).data( 'data' ) );
-        } );
-      }
-    }, 1000 );
-  } );
-
-} )();
+});

@@ -23,16 +23,9 @@ function gruntConfig(grunt) {
         files: ['assets/images-to-minify/*'],
         tasks: ['imagemin']
       },
-      jsLibs: {
-        files: '<%= concat.jsLibs.src %>',
-        tasks: ['concat:jsLibs'],
-        options: {
-          debounceDelay: 500
-        }
-      },
-      jsSite: {
-        files: '<%= concat.jsSite.src %>',
-        tasks: ['concat:jsSite'],
+      jsPack: {
+        files: '<%= concat.jsPack.src %>',
+        tasks: ['concat:jsPack'],
         options: {
           debounceDelay: 500
         }
@@ -51,23 +44,17 @@ function gruntConfig(grunt) {
       options: {
         separator: ';\n'
       },
-      jsSite: {
-        src: [
-          'assets/third-party/hightlight-js/highlight.pack.js',
-          'assets/js/uteis.js',
-          'assets/js/github.js',
-          'assets/js/site.js'
-        ],
-        dest: '_source/Scripts/site.dev.js'
-      },
-
-      jsLibs: {
+      jsPack: {
         src: [
           'bower_components/requirejs-bower/require.js',
           'bower_components/jquery/dist/jquery.min.js',
-          'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
+          'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
+          'assets/third-party/hightlight-js/highlight.pack.js',
+          'assets/js/uteis/*.js',
+          'assets/js/github.js',
+          'assets/js/site.js'
         ],
-        dest: '_source/Scripts/libs.dev.js'
+        dest: '_source/Scripts/package.dev.js'
       },
 
       cssSite: {
@@ -159,17 +146,11 @@ function gruntConfig(grunt) {
       options: {
         banner: '/*! <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
-      jsSite: {
+      jsPack: {
         src: [
-          '_source/Scripts/site.dev.js'
+          '_source/Scripts/package.dev.js'
         ],
-        dest: '_source/Scripts/site.min.js'
-      },
-      jsLibs: {
-        src: [
-          '_source/Scripts/libs.dev.js'
-        ],
-        dest: '_source/Scripts/libs.min.js'
+        dest: '_source/Scripts/package.min.js'
       }
     },
 

@@ -1,4 +1,4 @@
-(function (window, $) {
+require(['jquery', 'loadCss', '$html', '$DOC'], function ($, loadCss, $html, $DOC) {
 
   $(function () {
     loadGoogleFonts();
@@ -6,21 +6,21 @@
     handleCssChanges();
   });
 
-  function loadGoogleFonts() {
-    require(['loadCss'], function (loadCss) {
-      loadCss('http://fonts.googleapis.com/css?family=Raleway:300,400,700', fontLoaded);
+  /////
 
-      function fontLoaded() {
-        $html.addClass('fonts-loaded');
-      }
-    });
+  function loadGoogleFonts() {
+    loadCss('http://fonts.googleapis.com/css?family=Raleway:300,400,700', fontLoaded);
+
+    function fontLoaded() {
+      $html.addClass('fonts-loaded');
+    }
   }
 
 
   function stylizeCodeblocks() {
     $('pre code').each( eachCodeBlock );
 
-    function eachCodeBlock( i, block ){
+    function eachCodeBlock( i, block ) {
       hljs.highlightBlock( block );
     }
   }
@@ -46,5 +46,5 @@
       console.log( 'update-CSS' );
     }
   }
+});
 
-})(this, jQuery);
