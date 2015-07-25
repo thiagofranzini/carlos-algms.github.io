@@ -1,0 +1,38 @@
+
+#file-saver-demo .input {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+#file-saver-demo section {
+  margin-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #AAA;
+}
+
+.file-saver-demo-canvas,
+.file-saver-demo-text,
+.file-saver-demo-xhtml {
+  width: 500px;
+  height: 300px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+}
+
+.file-saver-demo-canvas {
+  cursor: crosshair;
+}
+
+#file-saver-demo .filename {
+  text-align: right;
+}
+
+.file-saver-demo-xhtml {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 1em;
+}

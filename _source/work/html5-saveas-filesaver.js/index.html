@@ -1,0 +1,79 @@
+---
+layout: page
+title: "HTML5 saveAs FileSaver.js"
+---
+<div id="file-saver-demo">
+  <h1>
+    <a href="https://github.com/carlos-algms/FileSaver.js">FileSaver.js</a>
+    demo
+  </h1>
+
+  <p>
+    The following examples demonstrate how it is possible to generate and save any type of data right in the browser using
+    the W3C <code>saveAs()</code> <a href="http://www.w3.org/TR/file-writer-api/#the-filesaver-interface">FileSaver</a>
+    interface, without contacting any servers.
+  </p>
+
+  <section id="image-demo">
+    <h2>Saving an image</h2>
+
+    <canvas class="file-saver-demo-canvas" id="canvas"></canvas>
+
+    <form id="canvas-options">
+      <label>Filename: <input type="text" class="filename" id="canvas-filename" placeholder="doodle"/>.png</label>
+      <input type="submit" value="Save" />
+      <input type="button" id="canvas-clear" value="Clear" />
+    </form>
+  </section>
+
+  <section id="text-demo">
+    <h2>Saving text</h2>
+
+    <textarea class="file-saver-demo-text" id="text" placeholder="Once upon a time..."></textarea>
+
+    <form id="text-options">
+      <label>Filename: <input type="text" class="filename" id="text-filename" placeholder="a plain document"/>.txt</label>
+      <input type="submit" value="Save"/>
+    </form>
+  </section>
+
+  <section id="html-demo">
+    <h2>Saving rich text</h2>
+
+    <div class="file-saver-demo-xhtml" id="html" contenteditable>
+      <h3>Some example rich text</h3>
+      <ul>
+        <li>
+          <del>Plain</del>
+          <ins>Boring</ins>
+          text.
+        </li>
+        <li><em>Emphasized text!</em></li>
+        <li><strong>Strong text!</strong></li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70">
+            <circle cx="35" cy="35" r="35" fill="red"></circle>
+            <text x="10" y="40">image</text>
+          </svg>
+        </li>
+        <li><a href="https://github.com/eligrey/FileSaver.js">A link.</a></li>
+      </ul>
+    </div>
+
+    <form id="html-options">
+      <label>
+        Filename:
+        <input type="text" class="filename" id="html-filename" placeholder="a rich document"/>
+        .xhtml
+      </label>
+      <input type="submit" value="Save" />
+    </form>
+  </section>
+
+  <script type="text/javascript">
+    require(['loadCss', 'demo.js'], function (loadCss) {
+      loadCss('demo.css');
+    });
+  </script>
+</div>
+
