@@ -46,10 +46,9 @@ require(['jquery'], function ($) {
       ctx.lineWidth = 6;
       ctx.lineJoin = 'round';
       ctx.strokeStyle = '#000000';
-      var
-        i = 0
-        , len = x_points.length
-        ;
+      var i = 0;
+      var len = x_points.length;
+
       for (; i < len; i++) {
         ctx.beginPath();
         if (i && drag_points[i]) {
@@ -159,13 +158,14 @@ require(['jquery'], function ($) {
     canvas.addEventListener('mousedown', function (event) {
       event.preventDefault();
       drawing = true;
-      add_point(event.pageX - canvas.offsetLeft, event.pageY - canvas.offsetTop, false);
+      console.log(event);
+      add_point(event.offsetX, event.offsetY, false);
       draw();
     }, false);
 
     canvas.addEventListener('mousemove', function (event) {
       if (drawing) {
-        add_point(event.pageX - canvas.offsetLeft, event.pageY - canvas.offsetTop, true);
+        add_point(event.offsetX, event.offsetY, true);
         draw();
       }
     }, false);
