@@ -63,8 +63,6 @@ function gruntConfig(grunt) {
 
       jsLibs: {
         src: [
-          'assets/third-party/modernizr.min.js',
-          'bower_components/lodash/dist/lodash.compat.min.js',
           'bower_components/jquery/dist/jquery.min.js',
           'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
         ],
@@ -186,13 +184,17 @@ function gruntConfig(grunt) {
 
   grunt.registerTask('default', []);
 
-  grunt.registerTask('serve', [ 'concurrent:serve' ]);
-
-  grunt.registerTask('deploy', [
+  grunt.registerTask('build', [
     'sass',
     'concat',
     'cssmin',
-    'uglify',
+    'uglify'
+  ]);
+
+  grunt.registerTask('serve', [ 'build', 'concurrent:serve' ]);
+
+  grunt.registerTask('deploy', [
+    'build',
     'shell:jekyllBuild',
     'shell:deployGithub'
   ]);
