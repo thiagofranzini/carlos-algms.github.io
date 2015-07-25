@@ -7,11 +7,13 @@
   });
 
   function loadGoogleFonts() {
-    yepnope.injectCss('http://fonts.googleapis.com/css?family=Raleway:300,400,700', fontLoaded);
+    require(['loadCss'], function (loadCss) {
+      loadCss('http://fonts.googleapis.com/css?family=Raleway:300,400,700', fontLoaded);
 
-    function fontLoaded() {
-      $html.addClass('fonts-loaded');
-    }
+      function fontLoaded() {
+        $html.addClass('fonts-loaded');
+      }
+    });
   }
 
 

@@ -63,6 +63,7 @@ function gruntConfig(grunt) {
 
       jsLibs: {
         src: [
+          'bower_components/requirejs-bower/require.js',
           'bower_components/jquery/dist/jquery.min.js',
           'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
         ],
@@ -186,15 +187,15 @@ function gruntConfig(grunt) {
 
   grunt.registerTask('build', [
     'sass',
-    'concat',
-    'cssmin',
-    'uglify'
+    'concat'
   ]);
 
   grunt.registerTask('serve', [ 'build', 'concurrent:serve' ]);
 
   grunt.registerTask('deploy', [
     'build',
+    'cssmin',
+    'uglify',
     'shell:jekyllBuild',
     'shell:deployGithub'
   ]);
