@@ -7,13 +7,26 @@ footer: true
 {% assign index = true %}
 
 <div class="jumbotron">
-	{% assign post = site.posts.first %}
-	{% assign content = post.content %}
-	{% include article.html %}
+  <div class="content">
+    <h1>FileSaver.js</h1>
+    <p>
+      FileSaver.js implements the HTML5 W3C <code>saveAs()</code> <code>FileSaver</code> interface in browsers that do not natively support it
+    </p>
+    <p>
+      <a class="btn btn-primary" href="{{ root_url }}/work/html5-saveas-filesaver.js/">
+        See the demo
+        <i class="fa fa-angle-double-right"></i>
+      </a>
+    </p>
+  </div>
 </div>
 
+<div class="h1">Last blog posts</div>
+
+<hr/>
+
 <div class="blog-index">
-  {% for post in site.posts limit: site.recent_posts offset:1 %}
+  {% for post in site.posts limit: site.recent_posts offset:0 %}
     {% assign content = post.content %}
     {% include article.html %}
   {% endfor %}
