@@ -1,4 +1,4 @@
-require(['jquery', 'loadCss', '$html', '$DOC'], function ($, loadCss, $html, $DOC) {
+require(['jquery', 'loadCss', '$html', '$DOC', 'teclas'], function ($, loadCss, $html, $DOC, Teclas) {
 
   $(function () {
     loadGoogleFonts();
