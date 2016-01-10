@@ -3,7 +3,7 @@ layout: post
 title: "How to configure the hostname of the server"
 date: 2014-07-06 13:27:40 -0300
 comments: false
-categories: Linux Ubuntu Cloud
+tags: [ Linux, Ubuntu, Cloud ]
 ---
 
 
@@ -23,9 +23,10 @@ categories: Linux Ubuntu Cloud
 	Ex: "john-notebook" or "office-pc3" or "plato".
 </p>
 
-<pre class="code-block"><code class="bash">$ echo "machine-name" > /etc/hostname
+```bash
+$ echo "machine-name" > /etc/hostname
 $ hostname -F /etc/hostname
-</code></pre>
+```
 
 
 <h3>FQDN</h3>
@@ -43,7 +44,8 @@ $ hostname -F /etc/hostname
 	If yout dont follow that order, you can`t have your reverse dns working.
 </p>
 
-<pre class="code-block"><code class="bash">127.0.0.1 localhost.localdomain localhost
+```bash
+127.0.0.1 localhost.localdomain localhost
 XXX.X.X.X machine-name.domain.tld machine-name
-</code></pre>
+```
 

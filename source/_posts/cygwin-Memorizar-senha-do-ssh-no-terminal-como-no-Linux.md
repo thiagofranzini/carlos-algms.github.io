@@ -1,7 +1,7 @@
 ---
 title: cygwin - Memorizar senha do ssh no terminal como no Linux
 date: 2016-01-10 18:55:56
-tags:
+tags: [ windows, cygwin, ssh ]
 ---
 
 O Linux pode memoriza todas as senhas utilizadas no `SSH` até que o usuário faça logoff ou reinicie o computador.

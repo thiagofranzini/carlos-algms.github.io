@@ -2,7 +2,7 @@
 layout: post
 title: Install Oracle java on Ubuntu
 date: 2014-11-20T15:30:00-02:00
-categories: Linux Ubuntu Java
+tags: [ Linux, Ubuntu, Java ]
 ---
 
 Ubuntu comes with an opensource java installed. To use the oracle's java, you need to remove the openjkd and install oracle's.
@@ -12,17 +12,23 @@ Ubuntu comes with an opensource java installed. To use the oracle's java, you ne
     First we need to remove the openjdk from Ubuntu.
 </p>
 
-<pre class="code-block"><code class="bash">sudo apt-get purge openjdk*</code></pre>
+```bash
+sudo apt-get purge openjdk*
+```
 
 <p>
     Then add webupd8team repository, since Oracle still don't have an official repository.
 </p>
 
-<pre class="code-block"><code class="bash">sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update</code></pre>
+```bash
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+```
 
 <p>
     After the update finished, we can install java via:
 </p>
 
-<pre class="code-block"><code class="bash">sudo apt-get install oracle-java8-installer</code></pre>
+```bash
+sudo apt-get install oracle-java8-installer
+```
