@@ -16,7 +16,7 @@
 <meta property="og:description" content="Every cloud that you use outside Brazil, does not come with pt-br support installed.
 	When you access your server via SSH, almost every command that you run on terminal,
 	will generate a warn that you">
-<meta property="og:updated_time" content="2016-01-10T18:30:13.025Z">
+<meta property="og:updated_time" content="2016-01-10T22:44:50.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Configure Ubuntu Server to Support Pt-Br">
 <meta name="twitter:description" content="Every cloud that you use outside Brazil, does not come with pt-br support installed.
@@ -79,13 +79,9 @@
         <section id="main"><article id="post-configure-ubuntu-server-to-support-pt-br" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/configure-ubuntu-server-to-support-pt-br/" class="article-date">
-  <time datetime="2014-07-06T23:01:32.000Z" itemprop="datePublished">06/07/2014</time>
+  <time datetime="2014-07-07T00:01:32.000Z" itemprop="datePublished">06/07/2014</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/Ubuntu-Linux-cloud-VM/">Ubuntu, Linux, cloud, VM</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -115,8 +111,7 @@
 	Note: This will not translate your Ubuntu, this will only add support to your language and remove the errors.
 </p>
 
-<pre class="code-block"><code class="bash">sudo apt-get install language-pack-pt-base
-sudo dpkg-reconfigure locales</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install language-pack-pt-base</span><br><span class="line">sudo dpkg-reconfigure locales</span><br></pre></td></tr></table></figure>
 
 <h3>Configure timezone</h3>
 <p>
@@ -124,9 +119,8 @@ sudo dpkg-reconfigure locales</code></pre>
 	location.
 </p>
 
-<pre class="code-block"><code class="bash">
-sudo dpkg-reconfigure tzdata
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure>
+
 <p>
 	First chose America, then São Paulo, or your own city.
 </p>
@@ -135,14 +129,17 @@ sudo dpkg-reconfigure tzdata
 	You can verify the current time by run the command:
 </p>
 
-<pre class="code-block"><code class="bash">date</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">date</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://carlos-algms.github.io//blog/configure-ubuntu-server-to-support-pt-br/" data-id="cij9422ci000crgq9h98dpjja" class="article-share-link">Share</a>
+      <a data-url="http://carlos-algms.github.io//blog/configure-ubuntu-server-to-support-pt-br/" data-id="cij94xdsn000mocq9tw0nfti1" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VM/">VM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cloud/">cloud</a></li></ul>
+
     </footer>
   </div>
   
@@ -174,19 +171,26 @@ sudo dpkg-reconfigure tzdata
           <aside id="sidebar">
   
     
+
+  
+    
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Linux-Ubuntu/">Linux Ubuntu</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Linux-Ubuntu-Cloud/">Linux Ubuntu Cloud</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Linux-Ubuntu-Java/">Linux Ubuntu Java</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Ubuntu-Linux-cloud-VM/">Ubuntu, Linux, cloud, VM</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud/">Cloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VM/">VM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cloud/">cloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cygwin/">cygwin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a></li></ul>
     </div>
   </div>
 
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Cloud/" style="font-size: 10px;">Cloud</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/VM/" style="font-size: 10px;">VM</a> <a href="/tags/cloud/" style="font-size: 10px;">cloud</a> <a href="/tags/cygwin/" style="font-size: 10px;">cygwin</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a>
+    </div>
+  </div>
 
-  
-    
   
     
   <div class="widget-wrap">

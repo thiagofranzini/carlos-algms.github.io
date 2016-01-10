@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://carlos-algms.github.io/blog/how-to-configure-the-hostname-of-the-server/index.html">
 <meta property="og:site_name" content="Carlos A. Gomes">
 <meta property="og:description" content="Hostname X FQDN">
-<meta property="og:updated_time" content="2016-01-10T16:52:41.961Z">
+<meta property="og:updated_time" content="2016-01-10T22:47:01.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Configure the Hostname of the Server">
 <meta name="twitter:description" content="Hostname X FQDN">
@@ -73,13 +73,9 @@
         <section id="main"><article id="post-how-to-configure-the-hostname-of-the-server" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/how-to-configure-the-hostname-of-the-server/" class="article-date">
-  <time datetime="2014-07-06T16:27:40.000Z" itemprop="datePublished">06/07/2014</time>
+  <time datetime="2014-07-06T17:27:40.000Z" itemprop="datePublished">06/07/2014</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/Linux-Ubuntu-Cloud/">Linux Ubuntu Cloud</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -114,10 +110,7 @@
 	Ex: "john-notebook" or "office-pc3" or "plato".
 </p>
 
-<pre class="code-block"><code class="bash">$ echo "machine-name" > /etc/hostname
-$ hostname -F /etc/hostname
-</code></pre>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">"machine-name"</span> &gt; /etc/hostname</span><br><span class="line">$ hostname -F /etc/hostname</span><br></pre></td></tr></table></figure>
 
 <h3>FQDN</h3>
 <p>
@@ -134,17 +127,17 @@ $ hostname -F /etc/hostname
 	If yout dont follow that order, you can`t have your reverse dns working.
 </p>
 
-<pre class="code-block"><code class="bash">127.0.0.1 localhost.localdomain localhost
-XXX.X.X.X machine-name.domain.tld machine-name
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span> localhost.localdomain localhost</span><br><span class="line">XXX.X.X.X machine-name.domain.tld machine-name</span><br></pre></td></tr></table></figure>
 
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://carlos-algms.github.io//blog/how-to-configure-the-hostname-of-the-server/" data-id="cij9422c70005rgq9luc0gp74" class="article-share-link">Share</a>
+      <a data-url="http://carlos-algms.github.io//blog/how-to-configure-the-hostname-of-the-server/" data-id="cij94xds90005ocq9auspp6la" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cloud/">Cloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
     </footer>
   </div>
   
@@ -171,19 +164,26 @@ XXX.X.X.X machine-name.domain.tld machine-name
           <aside id="sidebar">
   
     
+
+  
+    
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Linux-Ubuntu/">Linux Ubuntu</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Linux-Ubuntu-Cloud/">Linux Ubuntu Cloud</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Linux-Ubuntu-Java/">Linux Ubuntu Java</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Ubuntu-Linux-cloud-VM/">Ubuntu, Linux, cloud, VM</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cloud/">Cloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VM/">VM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cloud/">cloud</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cygwin/">cygwin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/">windows</a></li></ul>
     </div>
   </div>
 
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Cloud/" style="font-size: 10px;">Cloud</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/VM/" style="font-size: 10px;">VM</a> <a href="/tags/cloud/" style="font-size: 10px;">cloud</a> <a href="/tags/cygwin/" style="font-size: 10px;">cygwin</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/windows/" style="font-size: 10px;">windows</a>
+    </div>
+  </div>
 
-  
-    
   
     
   <div class="widget-wrap">
