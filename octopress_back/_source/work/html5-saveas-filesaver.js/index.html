@@ -1,0 +1,127 @@
+---
+layout: page
+title: "HTML5 saveAs FileSaver.js"
+---
+<div id="file-saver-demo">
+  <h1>
+    <a href="https://github.com/carlos-algms/FileSaver.js">FileSaver.js</a>
+    demo
+  </h1>
+
+  <p>
+    The following examples demonstrate how it is possible to generate and save any type of data right in the browser using
+    the W3C <code>saveAs()</code> <a href="http://www.w3.org/TR/file-writer-api/#the-filesaver-interface">FileSaver</a>
+    interface, without contacting any servers.
+  </p>
+
+  <p>
+    You can see all the magic by looking at <a href="demo.js" target="_blank">demo.js</a>
+  </p>
+
+  <section id="image-demo">
+    <h2>Saving a canvas image</h2>
+
+    <canvas class="file-saver-demo-canvas" id="canvas"></canvas>
+
+    <form id="canvas-options" class="form-inline">
+      <div class="form-group">
+        <div class="input-group">
+          <label class="input-group-addon">File name:</label>
+          <input type="text" class="filename form-control" id="canvas-filename" placeholder="doodle"/>
+          <span class="input-group-addon">.png</span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        <i class="fa fa-download"></i>
+        Save
+      </button>
+      <button type="button" id="canvas-clear" class="btn btn-default">
+        <i class="fa fa-eraser"></i>
+        Clear
+      </button>
+    </form>
+
+  </section>
+
+  <section id="text-demo">
+    <h2>Saving textarea text</h2>
+
+    <textarea class="file-saver-demo-text" id="text" placeholder="Once upon a time..."></textarea>
+
+    <form id="text-options" class="form-inline">
+      <div class="form-group">
+        <div class="input-group">
+          <label class="input-group-addon">File name:</label>
+          <input type="text" class="filename form-control" id="text-filename" placeholder="plain text" />
+          <span class="input-group-addon">.txt</span>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">
+        <i class="fa fa-download"></i>
+        Save
+      </button>
+    </form>
+  </section>
+
+  <section id="html-demo">
+    <h2>Saving rich text html</h2>
+
+    <div class="file-saver-demo-xhtml" id="html" contenteditable>
+      <h3>Some example rich text</h3>
+      <ul>
+        <li>
+          <del>Plain</del>
+          <ins>Boring</ins>
+          text.
+        </li>
+        <li><em>Emphasized text!</em></li>
+        <li><strong>Strong text!</strong></li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="70" height="70">
+            <circle cx="35" cy="35" r="35" fill="red"></circle>
+            <text x="10" y="40">image</text>
+          </svg>
+        </li>
+        <li><a href="https://github.com/eligrey/FileSaver.js">A link.</a></li>
+      </ul>
+    </div>
+
+    <form id="html-options" class="form-inline">
+      <div class="form-group">
+        <div class="input-group">
+          <label class="input-group-addon">File name:</label>
+          <input type="text" class="filename form-control" id="html-filename" placeholder="a rich document"/>
+          <span class="input-group-addon">.xhtml</span>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">
+        <i class="fa fa-download"></i>
+        Salve
+      </button>
+    </form>
+  </section>
+
+  <script type="text/javascript">
+    require(['loadCss', 'canvas-draw', 'demo'], function (loadCss) {
+      loadCss('demo.css');
+
+      /**
+       * Do not load Blob.js polyfill if Browser suport it
+       */
+      try {
+        new Blob();
+      } catch (e) {
+        require(['https://cdn.rawgit.com/eligrey/Blob.js/master/Blob.js']);
+      }
+
+      /**
+       * Do not load canvas-toBlob.js if browser suport it natively
+       */
+      if (HTMLCanvasElement && ! HTMLCanvasElement.prototype.toBlob) {
+        require(['https://cdn.rawgit.com/eligrey/canvas-toBlob.js/master/canvas-toBlob.js']);
+      }
+    });
+  </script>
+
+</div>
+

@@ -1,0 +1,16 @@
+_site/
+bower_components/
+node_modules/
+.pygments-cache/
+nbproject/
+.sass-cache/
+*.phpproj*
+*.suo
+*.user
+*.sln
+/Scripts/
+_deploy.yml
+.deploy/
+.idea/
+*.iml
+Gemfile.lock

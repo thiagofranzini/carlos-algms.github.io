@@ -1,78 +1,71 @@
-# ----------------------- #
-#    Jekyll & Plugins     #
-# ----------------------- #
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
 
-debug: false
-
-source: _source
-destination: _site
-plugins: plugins
-
-url: http://carlos-algms.github.io
-host : 127.0.0.1
-port: 8080
+# Site
 title: Carlos A. Gomes
 subtitle: Portfolio of Projects
-author: Carlos A. Gomes
-simple_search: https://www.google.com/search
 description: Portfolio of projects with PHP, MySql, AngularJs, jQuery, HTML5 e CSS3.
+author: Carlos A. Gomes
+language: pt-BR
+timezone: America/Sao_Paulo
 
-
-# If publishing to a subdirectory as in http://site.com/project set 'root: /project'
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://carlos-algms.github.io
+root: /
 permalink: /blog/:title/
+permalink_defaults:
 
-paginate: 6          # Posts per page on the blog index
-paginate_path: "blog/page-:num/"  # Directory base for pagination URLs eg. /blog/page/2/
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
 category_dir: blog/categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
 
-excerpt_link: "Read on"  # "Continue reading" link text at the bottom of excerpted articles
-excerpt_separator: "<!--more-->"
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: true # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
 
-recent_posts: 4       # Posts in the sidebar Recent Posts section
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
 
-titlecase: true       # Converts page and post titles to titlecase
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: DD/MM/YYYY
+time_format: HH:mm:ss
 
-date_format: "%d/%m/%Y"
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: blog/page-:num/
 
-# RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
-subscribe_email:
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: landscape
 
-# ----------------------- #
-#   3rd Party Settings    #
-# ----------------------- #
-
-# Github repositories
-github_user: carlos-algms
-github_repo_count: 0
-github_show_profile_link: true
-github_skip_forks: true
-
-
-# Twitter
-twitter_user: carlos_wigam
-twitter_tweet_button: true
-
-
-# Google +1
-google_plus_one: true
-google_plus_one_size: medium
-
-
-# Google Plus Profile
-# Hidden: No visible button, just add author information to search results
-googleplus_user: 115056144005752028773
-googleplus_hidden: false
-
-
-# Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
-
-
-# Google Analytics
-google_analytics_tracking_id: UA-52188553-1
-
-
-# Facebook Like
-facebook_like: true
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type:
