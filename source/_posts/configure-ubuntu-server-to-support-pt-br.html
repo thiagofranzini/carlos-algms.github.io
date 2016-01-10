@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Configure Ubuntu Server to support pt-br"
+date: 2014-07-06 20:01:32 -0300
+comments: true
+categories: Ubuntu, Linux, cloud, VM
+---
+
+<p>
+	Every cloud that you use outside Brazil, does not come with pt-br support installed.
+	When you access your server via SSH, almost every command that you run on terminal,
+	will generate a warn that your language is not supported.
+	<!-- more -->
+	To avoid this annoying warning, you just need to install the language pack.
+</p>
+
+<p>
+	Note: This will not translate your Ubuntu, this will only add support to your language and remove the errors.
+</p>
+
+<pre class="code-block"><code class="bash">sudo apt-get install language-pack-pt-base
+sudo dpkg-reconfigure locales</code></pre>
+
+<h3>Configure timezone</h3>
+<p>
+	After install the language-pack, is a good pratice configure the clock of your Ubuntu to reflect the clock of your
+	location.
+</p>
+
+<pre class="code-block"><code class="bash">
+sudo dpkg-reconfigure tzdata
+</code></pre>
+<p>
+	First chose America, then São Paulo, or your own city.
+</p>
+
+<p>
+	You can verify the current time by run the command:
+</p>
+
+<pre class="code-block"><code class="bash">date</code></pre>

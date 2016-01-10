@@ -37,8 +37,8 @@ function gruntConfig(grunt) {
 
     open: {
       dev: {
-        url: 'http://127.0.0.1:4000/',
-        app: 'google-chrome'
+        path: 'http://127.0.0.1:4000/',
+        app: 'chrome'
       }
     }
   });
