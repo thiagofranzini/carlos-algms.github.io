@@ -71,3 +71,5 @@ deploy:
   type: git
   repo: git@github.com:carlos-algms/carlos-algms.github.io.git
   branch: master
+
+disqus_shortname: carlos-algms
