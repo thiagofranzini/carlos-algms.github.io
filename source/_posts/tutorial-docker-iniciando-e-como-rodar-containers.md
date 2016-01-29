@@ -4,14 +4,16 @@ date: 2016-01-25 23:28:06
 tags: [ docker ]
 ---
 
+{% asset_img docker.png docker logo %}
+
 ## Rodando imagens
 ```shell
 $ docker run ubuntu
 ```
 Este comando vai seguir os seguintes passos:
-• Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha
-• Instalar a imagem em uma máquina virtual
-• Finalizar a execução
+* Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha
+* Instalar a imagem em uma máquina virtual
+* Finalizar a execução
 
 É possível, ainda, escolher a versão da imagem
 ```shell
@@ -50,7 +52,7 @@ Cada vez que você executa o comando `run`, o Docker vai criar um novo container
 $ docker ps -a
 ```
 
-{% asset_img docker-ps-a.jpg This is an example image %}
+{% asset_img docker-ps-a.jpg $ docker ps -a %}
 
 
 O Docker cria automaticamente um nome aleatório para cada container criado a partir do comando `run`, através deste nome você pode continuar a utilizar um container sem perder os dados a cada inicialização
