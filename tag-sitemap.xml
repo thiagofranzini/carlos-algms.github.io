@@ -9,13 +9,6 @@
     </url>
 
     <url>
-        <loc>http://carlos-algms.github.io/tags/cygwin/</loc>
-        <lastmod>2016-01-10T22:39:05.201Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://carlos-algms.github.io/tags/ssh/</loc>
         <lastmod>2016-01-10T22:39:05.201Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -67,6 +60,20 @@
     <url>
         <loc>http://carlos-algms.github.io/tags/docker/</loc>
         <lastmod>2016-01-30T20:44:55.206Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://carlos-algms.github.io/tags/cygwin/</loc>
+        <lastmod>2016-01-30T22:35:35.234Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://carlos-algms.github.io/tags/intelliJ/</loc>
+        <lastmod>2016-01-30T22:35:35.234Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
