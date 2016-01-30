@@ -1,7 +1,7 @@
 ---
 title: como utilizar o cygwin como terminal no intellij
 date: 2016-01-30 18:39:37
-tags:
+tags: [ cygwin, intelliJ ]
 ---
 
 Para o intelliJ abrir um terminal bash corretamente no windows, crie um arquivo `.bat` com os seguintes comandos:

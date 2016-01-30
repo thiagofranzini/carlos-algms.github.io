@@ -27,7 +27,10 @@
     <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml" />
   <% } %>
   <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
+    <!--[if lte IE 10 ]><%- favicon_tag(theme.favicon + '.ico') %><![endif]-->
+    <!--[if !IE]><!-->
+      <%- favicon_tag(theme.favicon + '.png') %>
+    <!--<![endif]-->
   <% } %>
   <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css" />
   <%- css('css/style') %>
