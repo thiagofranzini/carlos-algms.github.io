@@ -7,19 +7,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="description" content="Rodando imagens1$ docker run ubuntu
-Este comando vai seguir os seguintes passos:• Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha• Instalar a imagem em uma máquina v">
+Este comando vai seguir os seguintes passos:
+
+Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha
+Instalar a imagem em uma máquina vi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tutorial Docker Iniciando E Como Rodar Containers">
 <meta property="og:url" content="http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/index.html">
 <meta property="og:site_name" content="Carlos A. Gomes">
 <meta property="og:description" content="Rodando imagens1$ docker run ubuntu
-Este comando vai seguir os seguintes passos:• Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha• Instalar a imagem em uma máquina v">
+Este comando vai seguir os seguintes passos:
+
+Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha
+Instalar a imagem em uma máquina vi">
+<meta property="og:image" content="http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/docker.png">
 <meta property="og:image" content="http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/docker-ps-a.jpg">
-<meta property="og:updated_time" content="2016-01-27T00:00:43.548Z">
+<meta property="og:updated_time" content="2016-01-30T20:44:55.206Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tutorial Docker Iniciando E Como Rodar Containers">
 <meta name="twitter:description" content="Rodando imagens1$ docker run ubuntu
-Este comando vai seguir os seguintes passos:• Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha• Instalar a imagem em uma máquina v">
+Este comando vai seguir os seguintes passos:
+
+Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha
+Instalar a imagem em uma máquina vi">
   
     <link rel="alternate" href="/atom.xml" title="Carlos A. Gomes" type="application/atom+xml" />
   
@@ -109,8 +119,14 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Rodando_imagens"><a href="#Rodando_imagens" class="headerlink" title="Rodando imagens"></a>Rodando imagens</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu</span><br></pre></td></tr></table></figure>
-<p>Este comando vai seguir os seguintes passos:<br>• Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha<br>• Instalar a imagem em uma máquina virtual<br>• Finalizar a execução</p>
+        <img src="/blog/tutorial-docker-iniciando-e-como-rodar-containers/docker.png" alt="docker logo" title="docker logo">
+<h2 id="Rodando_imagens"><a href="#Rodando_imagens" class="headerlink" title="Rodando imagens"></a>Rodando imagens</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu</span><br></pre></td></tr></table></figure>
+<p>Este comando vai seguir os seguintes passos:</p>
+<ul>
+<li>Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha</li>
+<li>Instalar a imagem em uma máquina virtual</li>
+<li>Finalizar a execução</li>
+</ul>
 <p>É possível, ainda, escolher a versão da imagem<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu:14.04</span><br></pre></td></tr></table></figure></p>
 <p>O problema do comando run é que ele cria um container e morre, desligando assim a máquina virtual e deixando você sem acesso.</p>
 <a id="more"></a>
@@ -120,7 +136,7 @@ ga('send', 'pageview');
 <h2 id="Manter_o_container_docker_rodando"><a href="#Manter_o_container_docker_rodando" class="headerlink" title="Manter o container docker rodando"></a>Manter o container docker rodando</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu bash</span><br></pre></td></tr></table></figure>
 <p>Este comando vai montar toda a configuração e te dar acesso ao shell root do container.<br>Enquanto você não digitar <code>exit</code> e der enter, o container permanecerá rodando.</p>
 <h2 id="Listando_containers"><a href="#Listando_containers" class="headerlink" title="Listando containers"></a>Listando containers</h2><p>Cada vez que você executa o comando <code>run</code>, o Docker vai criar um novo container do zero e armazenar em cache para utilização futura. Você não deve ficar utilizando o comando <code>run</code> toda hora.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -a</span><br></pre></td></tr></table></figure></p>
-<img src="/blog/tutorial-docker-iniciando-e-como-rodar-containers/docker-ps-a.jpg" alt="This is an example image" title="This is an example image">
+<img src="/blog/tutorial-docker-iniciando-e-como-rodar-containers/docker-ps-a.jpg" alt="$ docker ps -a" title="$ docker ps -a">
 <p>O Docker cria automaticamente um nome aleatório para cada container criado a partir do comando <code>run</code>, através deste nome você pode continuar a utilizar um container sem perder os dados a cada inicialização</p>
 <h2 id="Rodando_containers_Docker_j_E1_criados"><a href="#Rodando_containers_Docker_j_E1_criados" class="headerlink" title="Rodando containers Docker já criados"></a>Rodando containers Docker já criados</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker start NOME_CONTAINER</span><br></pre></td></tr></table></figure>
 <p>O comando <code>start</code> só funciona com containers, portanto é <strong>obrigatório</strong> rodar o comando <code>run</code> pelo menos uma vez.<br>O container será iniciado e permanecerá rodando em segundo plano até o comando <code>stop</code> ser rodado. Por tanto você não terá acesso ao shell sem utilizar outro comando.</p>
@@ -135,7 +151,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/" data-id="cijw38o6c0005ysq9xwk3kgil" class="article-share-link">Share</a>
+      <a data-url="http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/" data-id="cik1n6l250005xkq9bvo7wk3z" class="article-share-link">Share</a>
+      
+        <a href="http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
@@ -145,6 +163,15 @@ ga('send', 'pageview');
   
     
 <nav id="article-nav">
+  
+    <a href="/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Como Utilizar O Cygwin Como Terminal No Intellij
+        
+      </div>
+    </a>
   
   
     <a href="/blog/cygwin-Memorizar-senha-do-ssh-no-terminal-como-no-Linux/" id="article-nav-older" class="article-nav-link-wrap">
@@ -157,6 +184,12 @@ ga('send', 'pageview');
   
 </article>
 
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -200,6 +233,10 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/">Como Utilizar O Cygwin Como Terminal No Intellij</a>
+          </li>
+        
+          <li>
             <a href="/blog/tutorial-docker-iniciando-e-como-rodar-containers/">Tutorial Docker Iniciando E Como Rodar Containers</a>
           </li>
         
@@ -213,10 +250,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/blog/how-to-chmod-on-multiple-files-or-folder-at-same-time/">How to CHMOD on Multiple Files or Folder at Same Time</a>
-          </li>
-        
-          <li>
-            <a href="/blog/configure-ubuntu-server-to-support-pt-br/">Configure Ubuntu Server to Support Pt-Br</a>
           </li>
         
       </ul>
@@ -245,6 +278,20 @@ ga('send', 'pageview');
   
 </nav>
     
+<script>
+  var disqus_shortname = 'carlos-algms';
+  
+  var disqus_url = 'http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 
 

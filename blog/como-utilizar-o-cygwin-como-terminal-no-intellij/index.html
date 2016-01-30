@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8" />
   
-  <title>Tag: Java | Carlos A. Gomes</title>
+  <title>Como Utilizar O Cygwin Como Terminal No Intellij | Carlos A. Gomes</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <meta name="description" content="Portfolio of projects with PHP, MySql, AngularJs, jQuery, HTML5 e CSS3.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Carlos A. Gomes">
-<meta property="og:url" content="http://carlos-algms.github.io/tags/Java/index.html">
+  <meta name="description" content="Para o intelliJ abrir um terminal bash corretamente no windows, crie um arquivo .bat com os seguintes comandos:
+Se você instalou a versão 64 bits:c:\cygwin64\bin\start-bash.bat12@echo offset CHERE_INV">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Como Utilizar O Cygwin Como Terminal No Intellij">
+<meta property="og:url" content="http://carlos-algms.github.io/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/index.html">
 <meta property="og:site_name" content="Carlos A. Gomes">
-<meta property="og:description" content="Portfolio of projects with PHP, MySql, AngularJs, jQuery, HTML5 e CSS3.">
+<meta property="og:description" content="Para o intelliJ abrir um terminal bash corretamente no windows, crie um arquivo .bat com os seguintes comandos:
+Se você instalou a versão 64 bits:c:\cygwin64\bin\start-bash.bat12@echo offset CHERE_INV">
+<meta property="og:image" content="http://carlos-algms.github.io/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/intellij-config-terminal.jpg">
+<meta property="og:image" content="http://carlos-algms.github.io/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/print-terminal-intellij.jpg">
+<meta property="og:updated_time" content="2016-01-30T22:09:38.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Carlos A. Gomes">
-<meta name="twitter:description" content="Portfolio of projects with PHP, MySql, AngularJs, jQuery, HTML5 e CSS3.">
+<meta name="twitter:title" content="Como Utilizar O Cygwin Como Terminal No Intellij">
+<meta name="twitter:description" content="Para o intelliJ abrir um terminal bash corretamente no windows, crie um arquivo .bat com os seguintes comandos:
+Se você instalou a versão 64 bits:c:\cygwin64\bin\start-bash.bat12@echo offset CHERE_INV">
   
     <link rel="alternate" href="/atom.xml" title="Carlos A. Gomes" type="application/atom+xml" />
   
@@ -82,40 +88,70 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/blog/Install-oracle-java-on-ubuntu/" class="archive-article-date">
-  <time datetime="2014-11-20T19:30:00.000Z" itemprop="datePublished">Nov 20</time>
+        <section id="main"><article id="post-como-utilizar-o-cygwin-como-terminal-no-intellij" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/" class="article-date">
+  <time datetime="2016-01-30T20:39:37.000Z" itemprop="datePublished">30/01/2016</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/Install-oracle-java-on-ubuntu/">Install Oracle Java on Ubuntu</a>
+    <h1 class="article-title" itemprop="name">
+      Como Utilizar O Cygwin Como Terminal No Intellij
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Para o intelliJ abrir um terminal bash corretamente no windows, crie um arquivo <code>.bat</code> com os seguintes comandos:</p>
+<p>Se você instalou a versão 64 bits:<br><figure class="highlight bat"><figcaption><span>c:\cygwin64\bin\start-bash.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">echo</span> off</span><br><span class="line"><span class="keyword">set</span> CHERE_INVOKING=<span class="number">1</span> &amp; c:\cygwin64\bin\bash.exe --login -i</span><br></pre></td></tr></table></figure></p>
+<p>Para versão 32 bits:<br><figure class="highlight bat"><figcaption><span>c:\cygwin\bin\start-bash.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">echo</span> off</span><br><span class="line"><span class="keyword">set</span> CHERE_INVOKING=<span class="number">1</span> &amp; c:\cygwin\bin\bash.exe --login -i</span><br></pre></td></tr></table></figure></p>
+<h2 id="Configurar_o_intelliJ"><a href="#Configurar_o_intelliJ" class="headerlink" title="Configurar o intelliJ"></a>Configurar o intelliJ</h2><p>No intelliJ, <code>File -&gt; Setting -&gt; Tools -&gt; Terminal</code>, e altere o terminal para o arquivo que você criou:</p>
+<img src="/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/intellij-config-terminal.jpg" alt="Print configuração do terminal intelliJ" title="Print configuração do terminal intelliJ">
+<p>Pronto, feche o terminal do intelliJ e abra novamente que já será o terminal bash.</p>
+<img src="/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/print-terminal-intellij.jpg" alt="Print do terminal intelliJ" title="Print do terminal intelliJ">
+<h2 id="Bonus"><a href="#Bonus" class="headerlink" title="Bonus"></a>Bonus</h2><p>O intelliJ não exibe corretamente comandos longos <code>git log</code> ou simplesmente o <code>vim</code>, para resolver isso, você só precisa adicionar uma variável no seu arquivo <code>.bash_profile</code>, pode ser na primeira linha mesmo.</p>
+<figure class="highlight"><figcaption><span>c:\cygwin64\home\voce\.bash_profile OU c:\cygwin\home\voce\.bash_profile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export TERM=cygwin</span><br></pre></td></tr></table></figure>
+<p>Fonte: <a href="https://janzhou.org/2015/06/integrating-cygwin-miktex-java-maven-and-intellij-idea-in-windows/" target="_blank" rel="external">janzhou</a></p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://carlos-algms.github.io/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/" data-id="cik1n6l2z000wxkq95ebojccr" class="article-share-link">Share</a>
+      
+        <a href="http://carlos-algms.github.io/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/tutorial-docker-iniciando-e-como-rodar-containers/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Tutorial Docker Iniciando E Como Rodar Containers</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 </section>
         
           <aside id="sidebar">
@@ -207,11 +243,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'carlos-algms';
   
+  var disqus_url = 'http://carlos-algms.github.io/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

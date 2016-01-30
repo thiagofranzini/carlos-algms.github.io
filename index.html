@@ -84,6 +84,54 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-como-utilizar-o-cygwin-como-terminal-no-intellij" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/" class="article-date">
+  <time datetime="2016-01-30T20:39:37.000Z" itemprop="datePublished">30/01/2016</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/">Como Utilizar O Cygwin Como Terminal No Intellij</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Para o intelliJ abrir um terminal bash corretamente no windows, crie um arquivo <code>.bat</code> com os seguintes comandos:</p>
+<p>Se você instalou a versão 64 bits:<br><figure class="highlight bat"><figcaption><span>c:\cygwin64\bin\start-bash.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">echo</span> off</span><br><span class="line"><span class="keyword">set</span> CHERE_INVOKING=<span class="number">1</span> &amp; c:\cygwin64\bin\bash.exe --login -i</span><br></pre></td></tr></table></figure></p>
+<p>Para versão 32 bits:<br><figure class="highlight bat"><figcaption><span>c:\cygwin\bin\start-bash.bat</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">echo</span> off</span><br><span class="line"><span class="keyword">set</span> CHERE_INVOKING=<span class="number">1</span> &amp; c:\cygwin\bin\bash.exe --login -i</span><br></pre></td></tr></table></figure></p>
+<h2 id="Configurar_o_intelliJ"><a href="#Configurar_o_intelliJ" class="headerlink" title="Configurar o intelliJ"></a>Configurar o intelliJ</h2><p>No intelliJ, <code>File -&gt; Setting -&gt; Tools -&gt; Terminal</code>, e altere o terminal para o arquivo que você criou:</p>
+<img src="/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/intellij-config-terminal.jpg" alt="Print configuração do terminal intelliJ" title="Print configuração do terminal intelliJ">
+<p>Pronto, feche o terminal do intelliJ e abra novamente que já será o terminal bash.</p>
+<img src="/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/print-terminal-intellij.jpg" alt="Print do terminal intelliJ" title="Print do terminal intelliJ">
+<h2 id="Bonus"><a href="#Bonus" class="headerlink" title="Bonus"></a>Bonus</h2><p>O intelliJ não exibe corretamente comandos longos <code>git log</code> ou simplesmente o <code>vim</code>, para resolver isso, você só precisa adicionar uma variável no seu arquivo <code>.bash_profile</code>, pode ser na primeira linha mesmo.</p>
+<figure class="highlight"><figcaption><span>c:\cygwin64\home\voce\.bash_profile OU c:\cygwin\home\voce\.bash_profile</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export TERM=cygwin</span><br></pre></td></tr></table></figure>
+<p>Fonte: <a href="https://janzhou.org/2015/06/integrating-cygwin-miktex-java-maven-and-intellij-idea-in-windows/" target="_blank" rel="external">janzhou</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://carlos-algms.github.io/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/" data-id="cik1n6l2z000wxkq95ebojccr" class="article-share-link">Share</a>
+      
+        <a href="http://carlos-algms.github.io/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-tutorial-docker-iniciando-e-como-rodar-containers" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/tutorial-docker-iniciando-e-como-rodar-containers/" class="article-date">
@@ -106,8 +154,14 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Rodando_imagens"><a href="#Rodando_imagens" class="headerlink" title="Rodando imagens"></a>Rodando imagens</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu</span><br></pre></td></tr></table></figure>
-<p>Este comando vai seguir os seguintes passos:<br>• Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha<br>• Instalar a imagem em uma máquina virtual<br>• Finalizar a execução</p>
+        <img src="/blog/tutorial-docker-iniciando-e-como-rodar-containers/docker.png" alt="docker logo" title="docker logo">
+<h2 id="Rodando_imagens"><a href="#Rodando_imagens" class="headerlink" title="Rodando imagens"></a>Rodando imagens</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu</span><br></pre></td></tr></table></figure>
+<p>Este comando vai seguir os seguintes passos:</p>
+<ul>
+<li>Baixar a última versão do Ubuntu disponível para Docker, caso você ainda não tenha</li>
+<li>Instalar a imagem em uma máquina virtual</li>
+<li>Finalizar a execução</li>
+</ul>
 <p>É possível, ainda, escolher a versão da imagem<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run ubuntu:14.04</span><br></pre></td></tr></table></figure></p>
 <p>O problema do comando run é que ele cria um container e morre, desligando assim a máquina virtual e deixando você sem acesso.</p>
         
@@ -118,7 +172,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/" data-id="cijw38o6c0005ysq9xwk3kgil" class="article-share-link">Share</a>
+      <a data-url="http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/" data-id="cik1n6l250005xkq9bvo7wk3z" class="article-share-link">Share</a>
+      
+        <a href="http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
@@ -162,7 +218,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://carlos-algms.github.io/blog/cygwin-Memorizar-senha-do-ssh-no-terminal-como-no-Linux/" data-id="cijw38o6v000iysq9nxczd5y7" class="article-share-link">Share</a>
+      <a data-url="http://carlos-algms.github.io/blog/cygwin-Memorizar-senha-do-ssh-no-terminal-como-no-Linux/" data-id="cik1n6l2p000ixkq9vudwi3zo" class="article-share-link">Share</a>
+      
+        <a href="http://carlos-algms.github.io/blog/cygwin-Memorizar-senha-do-ssh-no-terminal-como-no-Linux/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cygwin/">cygwin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh/">ssh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/windows/">windows</a></li></ul>
@@ -205,7 +263,9 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://carlos-algms.github.io/blog/Install-oracle-java-on-ubuntu/" data-id="cijw38o74000wysq9r9khels1" class="article-share-link">Share</a>
+      <a data-url="http://carlos-algms.github.io/blog/Install-oracle-java-on-ubuntu/" data-id="cik1n6l31000xxkq9p6xg8ok9" class="article-share-link">Share</a>
+      
+        <a href="http://carlos-algms.github.io/blog/Install-oracle-java-on-ubuntu/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
@@ -249,7 +309,9 @@ You can use find command to filter files and folder and apply chmod with only on
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://carlos-algms.github.io/blog/how-to-chmod-on-multiple-files-or-folder-at-same-time/" data-id="cijw38o6s000fysq901voa97n" class="article-share-link">Share</a>
+      <a data-url="http://carlos-algms.github.io/blog/how-to-chmod-on-multiple-files-or-folder-at-same-time/" data-id="cik1n6l2m000fxkq9f2vois87" class="article-share-link">Share</a>
+      
+        <a href="http://carlos-algms.github.io/blog/how-to-chmod-on-multiple-files-or-folder-at-same-time/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
@@ -295,7 +357,9 @@ You can use find command to filter files and folder and apply chmod with only on
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://carlos-algms.github.io/blog/configure-ubuntu-server-to-support-pt-br/" data-id="cijw38o71000pysq9h7dgv2xr" class="article-share-link">Share</a>
+      <a data-url="http://carlos-algms.github.io/blog/configure-ubuntu-server-to-support-pt-br/" data-id="cik1n6l2t000pxkq90962eajt" class="article-share-link">Share</a>
+      
+        <a href="http://carlos-algms.github.io/blog/configure-ubuntu-server-to-support-pt-br/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VM/">VM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cloud/">cloud</a></li></ul>
@@ -338,7 +402,9 @@ You can use find command to filter files and folder and apply chmod with only on
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://carlos-algms.github.io/blog/how-to-configure-the-hostname-of-the-server/" data-id="cijw38o6n0008ysq9tjffj4mp" class="article-share-link">Share</a>
+      <a data-url="http://carlos-algms.github.io/blog/how-to-configure-the-hostname-of-the-server/" data-id="cik1n6l2i0008xkq9lkoo9wku" class="article-share-link">Share</a>
+      
+        <a href="http://carlos-algms.github.io/blog/how-to-configure-the-hostname-of-the-server/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cloud/">Cloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
@@ -394,6 +460,10 @@ You can use find command to filter files and folder and apply chmod with only on
       <ul>
         
           <li>
+            <a href="/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/">Como Utilizar O Cygwin Como Terminal No Intellij</a>
+          </li>
+        
+          <li>
             <a href="/blog/tutorial-docker-iniciando-e-como-rodar-containers/">Tutorial Docker Iniciando E Como Rodar Containers</a>
           </li>
         
@@ -407,10 +477,6 @@ You can use find command to filter files and folder and apply chmod with only on
         
           <li>
             <a href="/blog/how-to-chmod-on-multiple-files-or-folder-at-same-time/">How to CHMOD on Multiple Files or Folder at Same Time</a>
-          </li>
-        
-          <li>
-            <a href="/blog/configure-ubuntu-server-to-support-pt-br/">Configure Ubuntu Server to Support Pt-Br</a>
           </li>
         
       </ul>
@@ -439,6 +505,18 @@ You can use find command to filter files and folder and apply chmod with only on
   
 </nav>
     
+<script>
+  var disqus_shortname = 'carlos-algms';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
 
 
 
