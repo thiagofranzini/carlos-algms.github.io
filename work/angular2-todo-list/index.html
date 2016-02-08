@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Angular2 TODO list</title>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/vendors-e8be863648.css" media="screen,projection"/>
+
+  <script src="scripts/polyfills-9f2f5a57ac.js"></script>
+
+  <!-- 2. Configure SystemJS -->
+  <script>
+    System.config({
+      packages: {
+        scripts: {
+          format: 'register',
+          defaultExtension: 'js'
+        }
+      }
+    });
+
+    System.import('scripts/main')
+      .then(null, console.error.bind(console));
+  </script>
+
+</head>
+
+<!-- 3. Display the application -->
+<body>
+
+<nav class="light-blue lighten-1" role="navigation">
+  <div class="nav-wrapper container">
+
+    <a id="logo-container" href="#" class="brand-logo">Logo</a>
+
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#" class="waves-effect waves-light">Navbar Link</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li><a href="#">Navbar Link</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+
+
+<main class="container">
+  <section class="section">
+
+    <my-app>Loading...</my-app>
+
+  </section>
+</main>
+
+
+<div style="display: none;">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script src="scripts/vendors-13a753d119.js"></script>
+</div>
+
+</body>
+</html>
