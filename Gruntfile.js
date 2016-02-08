@@ -19,6 +19,11 @@ function gruntConfig(grunt) {
     },
 
 
+    clean: {
+      build: ['public/', 'db.json']
+    },
+
+
     shell: {
       options: {
         stderr: true
@@ -27,10 +32,10 @@ function gruntConfig(grunt) {
         command: 'hexo serve'
       },
       build: {
-        command: 'jekyll build --config _config.yml'
+        command: 'hexo generate'
       },
       deployGithub: {
-        command: 'octopress deploy'
+        command: 'hexo deploy'
       }
     },
 
@@ -40,6 +45,21 @@ function gruntConfig(grunt) {
         path: 'http://127.0.0.1:4000/',
         app: 'chrome'
       }
+    },
+
+
+    copy: {
+      fullPages: {
+        files: [
+          {
+            expand: true,
+            dot: true,
+            cwd: 'full-pages/',
+            src: ['**'],
+            dest: 'public/work/'
+          }
+        ]
+      }
     }
   });
 
@@ -47,15 +67,15 @@ function gruntConfig(grunt) {
   grunt.registerTask('default', []);
 
   grunt.registerTask('build', [
+    'clean:build',
+    'shell:build',
+    'copy:fullPages'
   ]);
 
-  grunt.registerTask('serve', [ 'build', 'concurrent:serve' ]);
+  grunt.registerTask('serve', [ 'concurrent:serve' ]);
 
   grunt.registerTask('deploy', [
     'build',
-    'cssmin',
-    'uglify',
-    'shell:build',
     'shell:deployGithub'
   ]);
 
