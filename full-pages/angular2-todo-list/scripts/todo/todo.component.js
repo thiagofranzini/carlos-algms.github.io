@@ -1,4 +1,4 @@
-System.register(['angular2/core', './todo.service', './todo-form.component'], function(exports_1) {
+System.register(['angular2/core', './todo.service', './todo-form.component', '../analytics.directive'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', './todo.service', './todo-form.component'], fu
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, todo_service_1, todo_form_component_1;
+    var core_1, todo_service_1, todo_form_component_1, analytics_directive_1;
     var TodoComponent;
     return {
         setters:[
@@ -20,6 +20,9 @@ System.register(['angular2/core', './todo.service', './todo-form.component'], fu
             },
             function (todo_form_component_1_1) {
                 todo_form_component_1 = todo_form_component_1_1;
+            },
+            function (analytics_directive_1_1) {
+                analytics_directive_1 = analytics_directive_1_1;
             }],
         execute: function() {
             TodoComponent = (function () {
@@ -29,11 +32,11 @@ System.register(['angular2/core', './todo.service', './todo-form.component'], fu
                 TodoComponent = __decorate([
                     core_1.Component({
                         selector: 'todo-list',
-                        providers: [todo_service_1.TodoService]
+                        providers: [todo_service_1.TodoService],
                     }),
                     core_1.View({
                         template: "\n    <todo-form></todo-form>\n    <ul class=\"collection\" *ngIf=\"todoService.todos && todoService.todos.length > 0\">\n      <li class=\"collection-item\" *ngFor=\"#item of todoService.todos\">\n        <div>\n          {{ item.text }}\n          <a href=\"#!\" class=\"secondary-content\">\n            <i class=\"material-icons\">send</i>\n          </a>\n        </div>\n      </li>\n    </ul>\n  ",
-                        directives: [todo_form_component_1.TodoFormComponent]
+                        directives: [todo_form_component_1.TodoFormComponent, analytics_directive_1.AnalyticsDirective]
                     }), 
                     __metadata('design:paramtypes', [todo_service_1.TodoService])
                 ], TodoComponent);
