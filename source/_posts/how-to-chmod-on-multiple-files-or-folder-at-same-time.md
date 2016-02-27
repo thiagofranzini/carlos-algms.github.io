@@ -7,24 +7,20 @@ tags: [ Linux, Ubuntu ]
 
 Do chmod on multiple files could be hard if you only use chmod alone.
 You can use find command to filter files and folder and apply chmod with only one simple line.
+
 <!-- more -->
-<hr />
-<p>
-    Apply CHMOD to every folder and subfolder recursively
-</p>
+
+Apply CHMOD to every folder and subfolder recursively
 
 ```bash
 find clients/ -type d -print0 | xargs -0 chmod 755
 ```
 
-<p>
-    Apply CHMOD to every file recursively
-</p>
+Apply CHMOD to every file recursively
 
 ```bash
 find clients/ -type f -print0 | xargs -0 chmod 644
 ```
 
-<p>
-    The trick is <code>-type -d</code> and <code>-type -f</code> that tell to find command to only find folders and files, respectively.
-</p>
+The trick is <code>-type -d</code> and <code>-type -f</code> that tell to find command 
+to only find folders and files, respectively.
