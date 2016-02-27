@@ -1,23 +1,25 @@
-<nav class="light-blue darken-2" role="navigation">
-  <div class="nav-wrapper container">
+<div class="navbar-fixed">
+  <nav class="blue darken-1 z-depth-1-half" role="navigation">
+    <div class="nav-wrapper container">
 
-    <a id="logo-container" href="<%- url_for() %>" class="brand-logo">
-      <%= config.title %>
-    </a>
+      <a id="logo-container" href="<%- url_for() %>" class="brand-logo">
+        <%= config.title %>
+      </a>
 
-    <ul class="right hide-on-med-and-down">
-      <% for (var i in theme.menu){ %>
-        <li>
-          <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-        </li>
-      <% } %>
-    </ul>
+      <ul class="right hide-on-med-and-down">
+        <% for (var i in theme.menu){ %>
+          <li>
+            <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+          </li>
+        <% } %>
+      </ul>
 
-    <ul id="nav-mobile" class="side-nav">
-      <li><a href="#">Navbar Link</a></li>
-    </ul>
-    <a href="#" data-activates="nav-mobile" class="button-collapse">
-      <i class="material-icons">menu</i>
-    </a>
-  </div>
-</nav>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+  </nav>
+</div>

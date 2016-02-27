@@ -8,6 +8,7 @@
 
 .article-meta
   clearfix()
+  font-size: 0.8em
 
 .article-date
   @extend $block-caption
@@ -30,8 +31,8 @@
   padding: article-padding article-padding 0
 
   h1
-    margin: 0 0 article-padding 0
-    font-size: 3rem
+    margin: 0 0 10px 0
+    font-size: 2rem
 
 
 
@@ -139,6 +140,11 @@
 .article-more-link
   padding: 0 article-padding article-padding article-padding
 
+  .btn
+    padding: 0 1rem;
+    letter-spacing: 0px
+
+
 .article-footer
   clearfix()
   font-size: 0.85em
@@ -146,9 +152,11 @@
   border-top: 1px solid color-border
   padding-top: line-height
   margin: 0 article-padding article-padding
+
   a
     color: color-grey
     text-decoration: none
+
     &:hover
       color: color-default
 
@@ -162,6 +170,7 @@
 
 .article-comment-link
   float: right
+
   &:before
     content: "\f075"
     font-family: font-icon
@@ -171,6 +180,7 @@
   cursor: pointer
   float: right
   margin-left: 20px
+
   &:before
     content: "\f064"
     font-family: font-icon
@@ -189,6 +199,7 @@
   margin-left: -145px
   overflow: hidden
   z-index: 1
+
   &.on
     display: block
 
@@ -218,42 +229,52 @@ $article-share-link
   position: relative
   color: #999
   text-shadow: 0 1px #fff
+
   &:before
     font-size: 20px
     font-family: font-icon
     absolute-center(@font-size)
     text-align: center
+
   &:hover
     color: #fff
 
 .article-share-twitter
   @extend $article-share-link
+
   &:before
     content: "\f099"
+
   &:hover
     background: color-twitter
     text-shadow: 0 1px darken(color-twitter, 20%)
 
 .article-share-facebook
   @extend $article-share-link
+
   &:before
     content: "\f09a"
+
   &:hover
     background: color-facebook
     text-shadow: 0 1px darken(color-facebook, 20%)
 
 .article-share-pinterest
   @extend $article-share-link
+
   &:before
     content: "\f0d2"
+
   &:hover
     background: color-pinterest
     text-shadow: 0 1px darken(color-pinterest, 20%)
 
 .article-share-google
   @extend $article-share-link
+
   &:before
     content: "\f0d5"
+
   &:hover
     background: color-google
     text-shadow: 0 1px darken(color-google, 20%)
@@ -269,12 +290,54 @@ $article-share-link
 .article-gallery-img
   display: none
   max-width: 100%
+
   &:first-child
     display: block
+
   &.loaded
     position: absolute
     display: block
+
   img
     display: block
     max-width: 100%
     margin: 0 auto
+
+
+
+#page-nav
+  margin: block-margin auto
+  background: #fff
+  border: 1px solid color-border
+  text-align: center
+  color: color-grey
+  overflow: hidden
+
+  a, span
+    padding: 10px 20px
+    line-height: 1
+    height: 2em
+
+  a
+    color: #F44336
+    text-decoration: none
+
+    &:hover
+      background: #F44336
+      color: #fff
+
+  .extend
+    display: inline-block
+
+  .page-number
+    display: inline-block
+
+    @media mq-mobile
+      display: none
+
+  .current
+    color: color-default
+    font-weight: bold
+
+  .space
+    color: color-border
