@@ -1,48 +1,47 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    gitclone: {
-      fontawesome: {
-        options: {
-          repository: 'https://github.com/FortAwesome/Font-Awesome.git',
-          directory: '.tmp/fontawesome'
-        }
-      },
-      matererialize: {
-        options: {
-          repository: 'https://github.com/Dogfalo/materialize.git',
-          directory: '.tmp/materialize'
-        }
-      }
-    },
     copy: {
       fontawesome: {
         expand: true,
-        cwd: '.tmp/fontawesome/fonts/',
+        cwd: 'node_modules/font-awesome/fonts/',
         src: ['**'],
         dest: 'source/fonts/'
       },
       materialize: {
         expand: true,
-        cwd: '.tmp/materialize/dist/',
+        cwd: 'node_modules/materialize-css/dist/',
         src: [
-          'font/**',
-          'js/materialize.js'
+          'font/**'
         ],
+        dest: 'source/'
+      },
+      lightbox: {
+        expand: true,
+        cwd: 'node_modules/lightbox2/dist/',
+        src: ['images/**'],
         dest: 'source/'
       }
     },
-    _clean: {
-      tmp: ['.tmp'],
-      fontawesome: ['source/css/fonts']
+
+    clean: {
+      fontawesome: ['source/css/fonts'],
+      materialize: ['source/font'],
+      lightbox: ['']
+    },
+
+    concat: {
+      basic: {
+        dest: 'source/js/vendors.js',
+        src: [
+          'node_modules/materialize-css/dist/js/materialize.js',
+          'node_modules/lightbox2/dist/js/lightbox.js'
+        ]
+      }
     }
   });
 
   require('load-grunt-tasks')(grunt);
 
-  grunt.renameTask('clean', '_clean');
 
-  grunt.registerTask('fontawesome', ['gitclone:fontawesome', 'copy:fontawesome', '_clean:tmp']);
-  grunt.registerTask('fancybox', ['gitclone:fancybox', 'copy:fancybox', '_clean:tmp']);
-  grunt.registerTask('default', ['gitclone', 'copy', '_clean:tmp']);
-  grunt.registerTask('clean', ['_clean']);
+  grunt.registerTask('default', [ 'clean', 'copy', 'concat']);
 };

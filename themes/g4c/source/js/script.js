@@ -81,18 +81,19 @@
   });
 
   // Caption
-  $('.article-entry').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
+  $('.article-entry').each(function(i) {
+    var articleEntry = $(this);
+
+    articleEntry.find('img').each(function(j) {
+      var img = $(this);
+      if (img.parent().hasClass('fancybox')) return;
 
       var alt = this.alt;
 
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+      img.wrap('<a href="' + this.src + '" title="' + alt + '" data-lightbox="image-' + i + '-' + j + '" />');
     });
 
-    $(this).find('.fancybox').each(function(){
+    articleEntry.find('a[data-lightbox]').each(function(){
       $(this).attr('rel', 'article' + i);
     });
   });
