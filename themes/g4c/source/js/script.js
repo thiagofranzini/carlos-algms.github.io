@@ -1,53 +1,30 @@
 //TODO colocar loadCss em arquivo externo
-define('loadCss', function() {
-  var head = document.getElementsByTagName('head')[0];
-  return loadCss;
-
-  ///////////////////
-
-  function loadCss(url, callback) {
-    var link = document.createElement('link');
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    link.id = 'saci';//TODO este ID deve ser random
-    link.href = url;
-    link.onload = callback;
-    head.appendChild(link);
-  }
-});
+//define('loadCss', function() {
+//  var head = document.getElementsByTagName('head')[0];
+//  return loadCss;
+//
+//  ///////////////////
+//
+//  function loadCss(url, callback) {
+//    var link = document.createElement('link');
+//    link.type = 'text/css';
+//    link.rel = 'stylesheet';
+//    link.id = 'saci';//TODO este ID deve ser random
+//    link.href = url;
+//    link.onload = callback;
+//    head.appendChild(link);
+//  }
+//});
 
 (function($){
-  // Search
-  var $searchWrap = $('#search-form-wrap'),
-    isSearchAnim = false,
-    searchAnimDuration = 200;
 
-  var startSearchAnim = function(){
-    isSearchAnim = true;
-  };
+  //TODO abilitar o requireJS
 
-  var stopSearchAnim = function(callback){
-    setTimeout(function(){
-      isSearchAnim = false;
-      callback && callback();
-    }, searchAnimDuration);
-  };
+  $(function(){
+    $('.button-collapse').sideNav();
 
-  $('#nav-search-btn').on('click', function(){
-    if (isSearchAnim) return;
-
-    startSearchAnim();
-    $searchWrap.addClass('on');
-    stopSearchAnim(function(){
-      $('.search-form-input').focus();
-    });
   });
 
-  $('.search-form-input').on('blur', function(){
-    startSearchAnim();
-    $searchWrap.removeClass('on');
-    stopSearchAnim();
-  });
 
   // Share
   $('body').on('click', function(){
@@ -120,36 +97,4 @@ define('loadCss', function() {
     });
   });
 
-  if ($.fancybox){
-    $('.fancybox').fancybox();
-  }
-
-  // Mobile nav
-  var $container = $('#container'),
-    isMobileNavAnim = false,
-    mobileNavAnimDuration = 200;
-
-  var startMobileNavAnim = function(){
-    isMobileNavAnim = true;
-  };
-
-  var stopMobileNavAnim = function(){
-    setTimeout(function(){
-      isMobileNavAnim = false;
-    }, mobileNavAnimDuration);
-  }
-
-  $('#main-nav-toggle').on('click', function(){
-    if (isMobileNavAnim) return;
-
-    startMobileNavAnim();
-    $container.toggleClass('mobile-nav-on');
-    stopMobileNavAnim();
-  });
-
-  $('#wrap').on('click', function(){
-    if (isMobileNavAnim || !$container.hasClass('mobile-nav-on')) return;
-
-    $container.removeClass('mobile-nav-on');
-  });
 })(jQuery);

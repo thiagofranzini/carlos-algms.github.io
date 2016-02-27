@@ -23,9 +23,12 @@ module.exports = function(grunt){
       },
       materialize: {
         expand: true,
-        cwd: '.tmp/materialize/dist/font/',
-        src: ['**'],
-        dest: 'source/font/'
+        cwd: '.tmp/materialize/dist/',
+        src: [
+          'font/**',
+          'js/materialize.js'
+        ],
+        dest: 'source/'
       }
     },
     _clean: {
