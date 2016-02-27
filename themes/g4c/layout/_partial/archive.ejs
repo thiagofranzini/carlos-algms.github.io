@@ -6,29 +6,34 @@
 
 <% } else { %>
 
-  <% var last; %>
-  <% page.posts.each(function(post, i){ %>
+  <% var last;
+    page.posts.each(function(post, i) { %>
     <% var year = post.date.year(); %>
-    <% if (last != year){ %>
+
+    <% if (last != year) { %>
       <% if (last != null){ %>
-        </div></section>
+        </ul>
       <% } %>
       <% last = year; %>
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
-        </div>
-        <div class="archives">
+          <ul class="archives collection with-header">
+            <li class="collection-header">
+              <h4>
+                <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year grey-text text-darken-2"><%= year %></a>
+              </h4>
+            </li>
     <% } %>
-    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+           <li class="collection-item">
+              <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+           </li>
+
   <% }) %>
 
-  <% if (page.posts.length){ %>
-    </div></section>
+  <% if (page.posts.length) { %>
+    </ul>
   <% } %>
 <% } %>
 
-<% if (page.total > 1){ %>
+<% if (page.total > 1) { %>
   <nav id="page-nav">
     <%- paginator({
       prev_text: '&laquo; Prev',
