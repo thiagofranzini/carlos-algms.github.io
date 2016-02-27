@@ -63,7 +63,7 @@ pagination_dir: blog/page-:num/
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: g4c
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
