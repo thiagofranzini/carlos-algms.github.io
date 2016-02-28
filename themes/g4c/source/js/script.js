@@ -1,4 +1,5 @@
 //TODO colocar loadCss em arquivo externo
+//TODO dividir os js em váriso arquivos e concatenar com grunt
 //define('loadCss', function() {
 //  var head = document.getElementsByTagName('head')[0];
 //  return loadCss;
@@ -22,6 +23,22 @@
 
   $(function(){
     $('.button-collapse').sideNav();
+
+
+    $('.circle-progress').each(function () {
+
+      $(this).circleProgress({
+        value: this.dataset.value / 100,
+        size: 100,
+        startAngle: - Math.PI / 2,
+        fill: {
+          gradient: ["white", 'white']
+        }
+      }).on('circle-animation-progress', function(event, progress, stepValue) {
+        $(this).find('strong').text( (stepValue * 100 ).toFixed(0) );
+      });
+
+    });
 
   });
 

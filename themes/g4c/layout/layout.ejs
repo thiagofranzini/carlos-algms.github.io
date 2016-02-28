@@ -46,7 +46,7 @@
   <!--<![endif]-->
   <% } %>
 
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro|Material+Icons" rel="stylesheet" type="text/css" />
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro|Material+Icons|Raleway:400,300,700" rel="stylesheet" type="text/css" />
 
   <%- css('css/style') %>
   <%- partial('_partial/google-analytics') %>
@@ -58,13 +58,8 @@
 
   <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
 
-  <div id="main-container" class="container">
-    <div class="row">
-
-      <main class="col s12">
-        <%- body %>
-      </main>
-    </div>
+  <div id="main-container">
+    <%- body %>
   </div>
 
   <%- partial('_partial/footer') %>

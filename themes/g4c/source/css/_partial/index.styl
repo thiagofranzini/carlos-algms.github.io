@@ -1,0 +1,28 @@
+#skills-container {
+  margin-top: 50px;
+}
+
+.circle-progress {
+  display: inline-block;
+  position: relative;
+
+  div {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:  30px;
+    text-align: center;
+
+    > * {
+      display: block;
+    }
+  }
+
+  span {
+    font-size: 0.8em;
+  }
+
+  strong:after {
+    content: '%';
+  }
+}

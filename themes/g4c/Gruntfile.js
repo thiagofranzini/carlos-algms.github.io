@@ -34,7 +34,8 @@ module.exports = function(grunt){
         dest: 'source/js/vendors.js',
         src: [
           'node_modules/materialize-css/dist/js/materialize.js',
-          'node_modules/lightbox2/dist/js/lightbox.js'
+          'node_modules/lightbox2/dist/js/lightbox.js',
+          'node_modules/jquery-circle-progress/dist/circle-progress.js'
         ]
       }
     }

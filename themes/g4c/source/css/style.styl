@@ -14,20 +14,32 @@ global-reset()
 @import "../../node_modules/lightbox2/dist/css/lightbox.css"
 /* // lightbox */
 
-@import "_partial/archive";
-@import "_partial/highlight";
-@import "_partial/article";
-
-html
+html {
   font-size: font-size
+  font-family: font-sans;
+}
 
 body
-  background-color: #f5f5f5;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   color: color-default;
 
-#main-container
+sub {
+  bottom: 0;
+}
+
+strong {
+  font-weight: 600;
+}
+
+#main-container {
   margin-top: 20px;
   flex: 1 0 auto;
+}
+
+@import "_partial/archive";
+@import "_partial/article";
+@import "_partial/header";
+@import "_partial/highlight";
+@import "_partial/index";
