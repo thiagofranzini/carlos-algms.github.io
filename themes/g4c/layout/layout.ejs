@@ -5,7 +5,7 @@
   <%
   var title = page.title || '';
 
-  if ( is_archive() ) {
+  if ( is_archive() ) { //TODO trocar para blog e o número da página
     title = 'Archives';
 
     if ( is_month() ) {
@@ -62,7 +62,21 @@
     <%- body %>
   </div>
 
-  <%- partial('_partial/footer') %>
+  <footer class="page-footer grey darken-2">
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+
+        <div class="right">
+          Powered by <a href="http://hexo.io/" rel="nofollow" class="white-text" target="_blank">Hexo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <%- js('js/vendors') %>
+  <%- js('js/script') %>
 
 </body>
 </html>
