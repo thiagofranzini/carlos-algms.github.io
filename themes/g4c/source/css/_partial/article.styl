@@ -1,18 +1,8 @@
 .article
-  background #FFF
   margin: 0 0 block-margin 0
 
 .article-inner
-  border: 1px solid color-border
   overflow: hidden
-
-.article-meta
-  clearfix()
-  font-size: 0.8em
-
-.article-date
-  @extend $block-caption
-  float: left
 
 .article-category
   float: left
@@ -28,12 +18,27 @@
   margin: 0 12px 1em
 
 .article-header
-  padding: article-padding article-padding 0
+
+  a
+    color: color-default;
 
   h1
+    color: color-default;
     margin: 0 0 10px 0
-    font-size: 2rem
+    font-size: 2rem;
+    font-weight: 600;
 
+
+.article-meta
+  clearfix()
+  font-size: 0.8em
+  padding: 5px;
+  border-top: 1px dotted #CCC;
+  border-bottom: 1px dotted #CCC;
+
+.article-date
+  @extend $block-caption
+  float: left
 
 
 .article-entry
