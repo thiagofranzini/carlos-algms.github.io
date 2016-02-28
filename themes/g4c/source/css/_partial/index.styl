@@ -1,5 +1,22 @@
 #skills-container {
   margin-top: 50px;
+
+  h3 {
+    padding-top: 20px;
+  }
+
+  aside {
+    height: 150px;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    margin-left: 15px;
+  }
+
+  li {
+    line-height: 1.4em;
+  }
 }
 
 .circle-progress {
@@ -23,6 +40,26 @@
   }
 
   strong:after {
-    content: '%';
+    content: '%'
+  }
+}
+
+
+#main-projects {
+
+  .card-content {
+    min-height: 246px;
+  }
+
+  .card-content p {
+    line-height: 1.6em;
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+
+  .card-title {
+    color: color-featured;
   }
 }
