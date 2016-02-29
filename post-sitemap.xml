@@ -7,6 +7,38 @@
     </url>
 
     <url>
+        <loc>http://carlos-algms.github.io/blog/how-to-configure-the-hostname-of-the-server/</loc>
+        <lastmod>2016-02-29T02:14:39.528Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://carlos-algms.github.io/blog/how-to-chmod-on-multiple-files-or-folder-at-same-time/</loc>
+        <lastmod>2016-02-29T02:14:39.523Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://carlos-algms.github.io/blog/configure-ubuntu-server-to-support-pt-br/</loc>
+        <lastmod>2016-02-29T02:14:39.518Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://carlos-algms.github.io/blog/Install-oracle-java-on-ubuntu/</loc>
+        <lastmod>2016-02-29T02:14:39.513Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://carlos-algms.github.io/blog/como-utilizar-o-cygwin-como-terminal-no-intellij/</loc>
         <lastmod>2016-01-30T22:35:35.234Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,38 +49,6 @@
     <url>
         <loc>http://carlos-algms.github.io/blog/tutorial-docker-iniciando-e-como-rodar-containers/</loc>
         <lastmod>2016-01-30T20:44:55.206Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://carlos-algms.github.io/blog/how-to-configure-the-hostname-of-the-server/</loc>
-        <lastmod>2016-01-30T20:44:55.203Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://carlos-algms.github.io/blog/how-to-chmod-on-multiple-files-or-folder-at-same-time/</loc>
-        <lastmod>2016-01-10T22:46:25.156Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://carlos-algms.github.io/blog/configure-ubuntu-server-to-support-pt-br/</loc>
-        <lastmod>2016-01-10T22:44:50.152Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://carlos-algms.github.io/blog/Install-oracle-java-on-ubuntu/</loc>
-        <lastmod>2016-01-10T22:43:20.102Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
