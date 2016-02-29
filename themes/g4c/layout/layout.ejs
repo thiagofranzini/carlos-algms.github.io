@@ -6,18 +6,25 @@
   var title = page.title || '';
 
   if ( is_archive() ) { //TODO trocar para blog e o número da página
-    title = 'Archives';
+    title = 'Blog';
 
     if ( is_month() ) {
       title += ': ' + page.year + '/' + page.month;
-    } else if ( is_year() ){
+    } else if ( is_year() ) {
       title += ': ' + page.year;
     }
+
+    if( page.current > 1 ) {
+      title += ' page ' + page.current;
+    }
+
   } else if ( is_category() ) {
     title = 'Category: ' + page.category;
   } else if ( is_tag() ) {
     title = 'Tag: ' + page.tag;
   }
+
+  site.title = title;
   %>
   <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
 
