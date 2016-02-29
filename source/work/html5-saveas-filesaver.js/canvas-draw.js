@@ -81,7 +81,7 @@ function canvasDraw($) {
     _resizeCanvas();
     ctx.lineWidth = 6;
     ctx.lineJoin = 'round';
-    ctx.strokeStyle = '#000000';
+    ctx.strokeStyle = '#2196f3';
 
     for(var i = 0, len = canvasPoints.x.length; i < len; i++) {
       ctx.beginPath();

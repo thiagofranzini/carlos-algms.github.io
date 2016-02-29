@@ -51,7 +51,14 @@
   <%- css('css/style') %>
   <%- partial('_partial/google-analytics') %>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <%- js('js/vendors') %>
+
+  <script>
+    define('jquery', function () {
+      return window.jQuery;
+    });
+  </script>
+
 
 </head>
 <body>
@@ -74,9 +81,7 @@
     </div>
   </footer>
 
-
-  <%- js('js/vendors') %>
-  <%- js('js/script') %>
+  <%- js('js/app') %>
 
 </body>
 </html>

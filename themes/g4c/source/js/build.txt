@@ -1,0 +1,8 @@
+
+app.js
+----------------
+loadCss.js
+share-post.js
+lightbox-on-articles.js
+E:/projects/carlos-algms.github.io/themes/g4c/node_modules/lightbox2/dist/js/lightbox.js
+app.js

@@ -1,8 +1,8 @@
 ---
-layout: page
+layout: blank
 title: "HTML5 saveAs FileSaver.js"
 ---
-<div id="file-saver-demo">
+<section id="file-saver-demo" class="container">
   <h1>
     <a href="https://github.com/carlos-algms/FileSaver.js">FileSaver.js</a>
     demo
@@ -23,44 +23,63 @@ title: "HTML5 saveAs FileSaver.js"
 
     <canvas class="file-saver-demo-canvas" id="canvas"></canvas>
 
-    <form id="canvas-options" class="form-inline">
-      <div class="form-group">
-        <div class="input-group">
-          <label class="input-group-addon">File name:</label>
-          <input type="text" class="filename form-control" id="canvas-filename" placeholder="doodle"/>
-          <span class="input-group-addon">.png</span>
+    <form id="canvas-options" class="row">
+      <div class="input-field col s4">
+        <label for="canvas-filename">File name:</label>
+        <input placeholder="doodle" id="canvas-filename" type="text" class="validate filename" />
+      </div>
+
+      <div class="input-field col s2">
+        <label for="canvas-filename"></label>
+        <input value=".png" type="text" readonly />
+      </div>
+
+      <div class="input-field col s6">
+        <label>&nbsp;</label>
+        <div>
+          <button type="submit" class="btn">
+            <i class="fa fa-download"></i>
+            Save
+          </button>
+
+          <button type="button" id="canvas-clear" class="btn">
+            <i class="fa fa-eraser"></i>
+            Clear
+          </button>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">
-        <i class="fa fa-download"></i>
-        Save
-      </button>
-      <button type="button" id="canvas-clear" class="btn btn-default">
-        <i class="fa fa-eraser"></i>
-        Clear
-      </button>
     </form>
-
   </section>
+
 
   <section id="text-demo">
     <h2>Saving textarea text</h2>
 
     <textarea class="file-saver-demo-text" id="text" placeholder="Once upon a time..."></textarea>
 
-    <form id="text-options" class="form-inline">
-      <div class="form-group">
-        <div class="input-group">
-          <label class="input-group-addon">File name:</label>
-          <input type="text" class="filename form-control" id="text-filename" placeholder="plain text" />
-          <span class="input-group-addon">.txt</span>
+
+    <form id="text-options" class="row">
+      <div class="input-field col s6">
+        <label for="text-filename">File name:</label>
+        <input placeholder="plain text" id="text-filename" type="text" class="validate filename" />
+      </div>
+
+      <div class="input-field col s2">
+        <label for="canvas-filename"></label>
+        <input value=".txt" type="text" readonly />
+      </div>
+
+      <div class="input-field col s4">
+        <label>&nbsp;</label>
+        <div>
+          <button type="submit" class="btn">
+            <i class="fa fa-download"></i>
+            Save
+          </button>
         </div>
       </div>
-      <button class="btn btn-primary" type="submit">
-        <i class="fa fa-download"></i>
-        Save
-      </button>
     </form>
+
   </section>
 
   <section id="html-demo">
@@ -86,18 +105,26 @@ title: "HTML5 saveAs FileSaver.js"
       </ul>
     </div>
 
-    <form id="html-options" class="form-inline">
-      <div class="form-group">
-        <div class="input-group">
-          <label class="input-group-addon">File name:</label>
-          <input type="text" class="filename form-control" id="html-filename" placeholder="a rich document"/>
-          <span class="input-group-addon">.xhtml</span>
+    <form id="html-options" class="row">
+      <div class="input-field col s6">
+        <label for="html-filename">File name:</label>
+        <input placeholder="plain text" id="html-filename" type="text" class="validate filename" />
+      </div>
+
+      <div class="input-field col s2">
+        <label for="canvas-filename"></label>
+        <input value=".xhtml" type="text" readonly />
+      </div>
+
+      <div class="input-field col s4">
+        <label>&nbsp;</label>
+        <div>
+          <button type="submit" class="btn">
+            <i class="fa fa-download"></i>
+            Save
+          </button>
         </div>
       </div>
-      <button class="btn btn-primary" type="submit">
-        <i class="fa fa-download"></i>
-        Salve
-      </button>
     </form>
   </section>
 
@@ -123,5 +150,5 @@ title: "HTML5 saveAs FileSaver.js"
     });
   </script>
 
-</div>
+</section>
 
