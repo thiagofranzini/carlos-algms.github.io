@@ -30,7 +30,6 @@ define(['jquery'], function($){
 
     function addRelPropertyOnLinks() {
       this.rel = 'article' + i;
-      //$(this).attr('rel', 'article' + i);
     }
 
   }

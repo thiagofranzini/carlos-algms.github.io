@@ -29,7 +29,7 @@ function gruntConfig(grunt) {
         stderr: true
       },
       serve: {
-        command: 'hexo serve'
+        command: 'hexo serve --silent'
       },
       build: {
         command: 'hexo generate'

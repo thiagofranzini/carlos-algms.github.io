@@ -74,4 +74,6 @@ deploy:
   repo: git@github.com:carlos-algms/carlos-algms.github.io.git
   branch: master
 
+
+google_analytics: UA-52188553-1
 disqus_shortname: carlos-algms

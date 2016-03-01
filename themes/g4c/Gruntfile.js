@@ -25,8 +25,7 @@ module.exports = function(grunt){
 
     clean: {
       fontawesome: ['source/css/fonts'],
-      materialize: ['source/font'],
-      lightbox: ['']
+      materialize: ['source/font']
     },
 
     concat: {
